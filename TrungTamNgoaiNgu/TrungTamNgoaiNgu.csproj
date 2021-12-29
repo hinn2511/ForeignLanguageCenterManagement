@@ -59,13 +59,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Bus_ThiSinh.cs" />
+    <Compile Include="DAL\Dal_KhoaThi.cs" />
     <Compile Include="DAL\Dal_ThiSinh.cs" />
+    <Compile Include="DTO\Dto_KhoaThi.cs" />
+    <Compile Include="DTO\Dto_PhieuDangKy.cs" />
     <Compile Include="DTO\Dto_ThiSinh.cs" />
     <Compile Include="GUI\GiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\GiaoDienChinh.Designer.cs">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Gui_GiaoDienChinh\Gui_GiaoDienChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Gui_GiaoDienChinh\Gui_GiaoDienChinh.designer.cs">
+      <DependentUpon>Gui_GiaoDienChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_ThiSinh\Gui_TS.cs">
       <SubType>Form</SubType>
@@ -88,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="GUI\GiaoDienChinh.resx">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Gui_GiaoDienChinh\Gui_GiaoDienChinh.resx">
+      <DependentUpon>Gui_GiaoDienChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_ThiSinh\Gui_TS.resx">
       <DependentUpon>Gui_TS.cs</DependentUpon>
