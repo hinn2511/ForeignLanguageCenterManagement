@@ -48,7 +48,7 @@ namespace TrungTamNgoaiNgu
     #endregion
 		
 		public QLTTNNDataContext() : 
-				base(global::TrungTamNgoaiNgu.Properties.Settings.Default.QLTTNNConnectionString, mappingSource)
+				base(global::TrungTamNgoaiNgu.Properties.Settings.Default.QLTTNNConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1047,6 +1047,8 @@ namespace TrungTamNgoaiNgu
 		
 		private int _Id;
 		
+		private string _CMND;
+		
 		private string _HoTen;
 		
 		private string _GioiTinh;
@@ -1054,8 +1056,6 @@ namespace TrungTamNgoaiNgu
 		private System.DateTime _NgaySinh;
 		
 		private string _NoiSinh;
-		
-		private string _CMND;
 		
 		private System.DateTime _NgayCap;
 		
@@ -1075,6 +1075,8 @@ namespace TrungTamNgoaiNgu
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
+    partial void OnCMNDChanging(string value);
+    partial void OnCMNDChanged();
     partial void OnHoTenChanging(string value);
     partial void OnHoTenChanged();
     partial void OnGioiTinhChanging(string value);
@@ -1083,8 +1085,6 @@ namespace TrungTamNgoaiNgu
     partial void OnNgaySinhChanged();
     partial void OnNoiSinhChanging(string value);
     partial void OnNoiSinhChanged();
-    partial void OnCMNDChanging(string value);
-    partial void OnCMNDChanged();
     partial void OnNgayCapChanging(System.DateTime value);
     partial void OnNgayCapChanged();
     partial void OnNoiCapChanging(string value);
@@ -1118,6 +1118,26 @@ namespace TrungTamNgoaiNgu
 					this._Id = value;
 					this.SendPropertyChanged("Id");
 					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMND", DbType="NChar(12) NOT NULL", CanBeNull=false)]
+		public string CMND
+		{
+			get
+			{
+				return this._CMND;
+			}
+			set
+			{
+				if ((this._CMND != value))
+				{
+					this.OnCMNDChanging(value);
+					this.SendPropertyChanging();
+					this._CMND = value;
+					this.SendPropertyChanged("CMND");
+					this.OnCMNDChanged();
 				}
 			}
 		}
@@ -1198,26 +1218,6 @@ namespace TrungTamNgoaiNgu
 					this._NoiSinh = value;
 					this.SendPropertyChanged("NoiSinh");
 					this.OnNoiSinhChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMND", DbType="NChar(12) NOT NULL", CanBeNull=false)]
-		public string CMND
-		{
-			get
-			{
-				return this._CMND;
-			}
-			set
-			{
-				if ((this._CMND != value))
-				{
-					this.OnCMNDChanging(value);
-					this.SendPropertyChanging();
-					this._CMND = value;
-					this.SendPropertyChanged("CMND");
-					this.OnCMNDChanged();
 				}
 			}
 		}

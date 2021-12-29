@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLTTNN" Class="QLTTNNDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-2FASE7B\HOANGKHA;Initial Catalog=QLTTNN;Integrated Security=True" SettingsObjectName="TrungTamNgoaiNgu.Properties.Settings" SettingsPropertyName="QLTTNNConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-3R5K64P\DB;Initial Catalog=QLTTNN;Integrated Security=True" SettingsObjectName="TrungTamNgoaiNgu.Properties.Settings" SettingsPropertyName="QLTTNNConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DanhSachPhongThi" Member="DanhSachPhongThis">
     <Type Name="DanhSachPhongThi">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -47,11 +47,11 @@
   <Table Name="dbo.ThiSinh" Member="ThiSinhs">
     <Type Name="ThiSinh">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="NChar(12) NOT NULL" CanBeNull="false" />
       <Column Name="HoTen" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="CMND" Type="System.String" DbType="NChar(12) NOT NULL" CanBeNull="false" />
       <Column Name="NgayCap" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="NoiCap" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="SDT" Type="System.String" DbType="NChar(12) NOT NULL" CanBeNull="false" />

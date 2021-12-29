@@ -1,4 +1,6 @@
-﻿namespace TrungTamNgoaiNgu.GUI.Mau1
+﻿using FontAwesome.Sharp;
+
+namespace TrungTamNgoaiNgu.GUI.Mau1
 {
     partial class Mau1
     {

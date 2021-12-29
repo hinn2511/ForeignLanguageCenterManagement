@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TrungTamNgoaiNgu.BUS;
+﻿using System.Windows.Forms;
 
 namespace TrungTamNgoaiNgu.GUI.Mau1
 {
     public partial class Mau1 : Form
     {
-      
+
         public Mau1()
         {
             InitializeComponent();
