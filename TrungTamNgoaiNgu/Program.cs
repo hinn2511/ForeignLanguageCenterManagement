@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.GUI;
+using TrungTamNgoaiNgu.GUI.GUITS;
 
 namespace TrungTamNgoaiNgu
 {
@@ -17,7 +18,7 @@ namespace TrungTamNgoaiNgu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GiaoDienChinh());
+            Application.Run(new GUITS());
         }
     }
 }

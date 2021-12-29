@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLTTNN" Class="QLTTNNDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-2FASE7B\HOANGKHA;Initial Catalog=QLTTNN;Integrated Security=True" SettingsObjectName="TrungTamNgoaiNgu.Properties.Settings" SettingsPropertyName="QLTTNNConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DanhSachPhongThi" Member="DanhSachPhongThis">
+    <Type Name="DanhSachPhongThi">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_ThiSinh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_PhongThi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SBD" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="DiemNghe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemNoi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemDoc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemViet" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="PhongThi_DanhSachPhongThi" Member="PhongThi" ThisKey="Id_PhongThi" OtherKey="Id" Type="PhongThi" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="ThiSinh_DanhSachPhongThi" Member="ThiSinh" ThisKey="Id_ThiSinh" OtherKey="Id" Type="ThiSinh" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhoaThi" Member="KhoaThis">
+    <Type Name="KhoaThi">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenKhoaThi" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayThi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="KhoaThi_PhieuDangKy" Member="PhieuDangKies" ThisKey="Id" OtherKey="Id_KhoaThi" Type="PhieuDangKy" />
+      <Association Name="KhoaThi_PhongThi" Member="PhongThis" ThisKey="Id" OtherKey="ID_KhoaThi" Type="PhongThi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuDangKy" Member="PhieuDangKies">
+    <Type Name="PhieuDangKy">
+      <Column Name="Id_ThiSinh" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_KhoaThi" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TrinhDo" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDangKy" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="KhoaThi_PhieuDangKy" Member="KhoaThi" ThisKey="Id_KhoaThi" OtherKey="Id" Type="KhoaThi" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="ThiSinh_PhieuDangKy" Member="ThiSinh" ThisKey="Id_ThiSinh" OtherKey="Id" Type="ThiSinh" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhongThi" Member="PhongThis">
+    <Type Name="PhongThi">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenPhongThi" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="TrinhDo" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CaThi" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="ID_KhoaThi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PhongThi_DanhSachPhongThi" Member="DanhSachPhongThis" ThisKey="Id" OtherKey="Id_PhongThi" Type="DanhSachPhongThi" />
+      <Association Name="KhoaThi_PhongThi" Member="KhoaThi" ThisKey="ID_KhoaThi" OtherKey="Id" Type="KhoaThi" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThiSinh" Member="ThiSinhs">
+    <Type Name="ThiSinh">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NoiSinh" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="NChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayCap" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NoiCap" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="NChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Association Name="ThiSinh_DanhSachPhongThi" Member="DanhSachPhongThis" ThisKey="Id" OtherKey="Id_ThiSinh" Type="DanhSachPhongThi" />
+      <Association Name="ThiSinh_PhieuDangKy" Member="PhieuDangKies" ThisKey="Id" OtherKey="Id_ThiSinh" Type="PhieuDangKy" />
+    </Type>
+  </Table>
+</Database>
