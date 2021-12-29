@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
 
-namespace TrungTamNgoaiNgu.GUI.GUITS
+namespace TrungTamNgoaiNgu.GUI.Mau1
 {
     public partial class Mau1 : Form
     {
