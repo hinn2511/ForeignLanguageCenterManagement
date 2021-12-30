@@ -8,11 +8,13 @@ namespace TrungTamNgoaiNgu.GUI.GUITS
     public partial class GUITS : Form
     {
         private List<ThiSinh> dsTS = new List<ThiSinh>();
+        int currentIndex;
         public GUITS()
         {
             InitializeComponent();
             CapNhatDanhSachTS();
             DatTenDauDanhSach();
+            currentIndex = -1;
         }
         private void DatTenDauDanhSach()
         {
@@ -38,6 +40,41 @@ namespace TrungTamNgoaiNgu.GUI.GUITS
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (currentIndex <0)
+                MessageBox.Show("Vui lòng chọn thí sinh cần xóa", "Lỗi", MessageBoxButtons.OK);
+            else
+            {
+                Bus_ThiSinh bus = new Bus_ThiSinh();
+                var res = bus.XoaTS(dsTS[currentIndex].Id);
+                if (res)
+                {
+                    MessageBox.Show("Đã xóa thành công", "Xóa thành công", MessageBoxButtons.OK);
+                    dsTS.RemoveAt(currentIndex);
+                    dataGridViewTS.DataSource = null;
+                    dataGridViewTS.DataSource = dsTS;
+                }
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            Gui_ThemTS themTS = new Gui_ThemTS();
+            themTS.ShowDialog();
+            CapNhatDanhSachTS();
+        }
+
+        private void dataGridViewTS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == 0) return;
+
+            if (dataGridViewTS.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                currentIndex = e.RowIndex;
+            }
         }
     }
 }

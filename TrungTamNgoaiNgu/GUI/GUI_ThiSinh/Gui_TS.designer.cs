@@ -100,6 +100,7 @@
             this.dataGridViewTS.RowTemplate.Height = 24;
             this.dataGridViewTS.Size = new System.Drawing.Size(1237, 592);
             this.dataGridViewTS.TabIndex = 0;
+            this.dataGridViewTS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTS_CellContentClick);
             // 
             // panel6
             // 
@@ -280,6 +281,7 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -322,6 +324,7 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // GUITS
             // 
@@ -331,7 +334,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GUITS";
-            this.Text = "Gui_GiaTour";
+            this.Text = "Thí sinh";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
