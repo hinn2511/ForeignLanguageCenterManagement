@@ -44,7 +44,7 @@ namespace TrungTamNgoaiNgu.GUI.GUITS
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (currentIndex <0)
+            if (currentIndex < 0)
                 MessageBox.Show("Vui lòng chọn thí sinh cần xóa", "Lỗi", MessageBoxButtons.OK);
             else
             {

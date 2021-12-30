@@ -14,7 +14,7 @@ namespace TrungTamNgoaiNgu.DAL
             return TS;
         }
 
-        public bool ThemTs (ThiSinh thiSinh)
+        public bool ThemTs(ThiSinh thiSinh)
         {
             context.ThiSinhs.InsertOnSubmit(thiSinh);
             try
@@ -28,7 +28,7 @@ namespace TrungTamNgoaiNgu.DAL
             }
         }
 
-        public bool XoaTs (int TsId)
+        public bool XoaTs(int TsId)
         {
             var DeleteTS = context.ThiSinhs.FirstOrDefault(ts => ts.Id == TsId);
 
@@ -41,17 +41,17 @@ namespace TrungTamNgoaiNgu.DAL
                     context.SubmitChanges();
                     return true;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     return false;
                 }
             }
-            return false;  
+            return false;
         }
 
-        public ThiSinh LayThongTinTS (int id)
+        public ThiSinh LayThongTinTS(int id)
         {
-            var ts = context.ThiSinhs.FirstOrDefault(t =>t.Id == id);
+            var ts = context.ThiSinhs.FirstOrDefault(t => t.Id == id);
             return ts;
         }
     }

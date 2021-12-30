@@ -13,25 +13,25 @@ namespace TrungTamNgoaiNgu.BUS
             return dal.LayDanhSachThiSinh();
         }
 
-        public bool ThemTS (ThiSinh TS)
+        public bool ThemTS(ThiSinh TS)
         {
-            return dal.ThemTs (TS);
+            return dal.ThemTs(TS);
         }
 
-        public bool XoaTS (int id)
+        public bool XoaTS(int id)
         {
             return dal.XoaTs(id);
         }
 
-        public List <ThiSinh> TimKiemTS (List<ThiSinh> dsTs, string key)
+        public List<ThiSinh> TimKiemTS(List<ThiSinh> dsTs, string key)
         {
             var res = dsTs.Where(t => t.HoTen.Contains(key)).ToList();
             return res;
         }
 
-        public ThiSinh LayThongTinTS (int id)
+        public ThiSinh LayThongTinTS(int id)
         {
-            return dal.LayThongTinTS(id); 
+            return dal.LayThongTinTS(id);
         }
     }
 }
