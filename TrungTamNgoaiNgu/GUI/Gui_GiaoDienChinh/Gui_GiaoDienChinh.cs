@@ -36,7 +36,7 @@ namespace TrungTamNgoaiNgu.GUI.Gui_GiaoDienChinh
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-                iconCurrentChildForm.IconChar = currentBtn.IconChar;
+ //               iconCurrentChildForm.IconChar = currentBtn.IconChar;
             }
         }
 
@@ -58,7 +58,7 @@ namespace TrungTamNgoaiNgu.GUI.Gui_GiaoDienChinh
             DisableButton();
             leftBorderBtn.Visible = false;
             //OpenChildForm(new Gui_TrangChu());
-            iconCurrentChildForm.IconChar = IconChar.Home;
+ //           iconCurrentChildForm.IconChar = IconChar.Home;
             lblTitleChildForm.Text = "TRANG CHỦ";
         }
         private void OpenChildForm(Form childForm)
