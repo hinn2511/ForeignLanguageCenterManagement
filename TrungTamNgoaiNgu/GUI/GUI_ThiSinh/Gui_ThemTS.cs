@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
+using TrungTamNgoaiNgu.DTO;
 
 namespace TrungTamNgoaiNgu.GUI
 {
@@ -22,7 +23,7 @@ namespace TrungTamNgoaiNgu.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ThiSinh ts = new ThiSinh();
+            Dto_ThiSinh ts = new Dto_ThiSinh();
             Bus_ThiSinh bus = new Bus_ThiSinh();
             ts.HoTen = txtHoTen.Text;
             ts.GioiTinh = cbxGioiTinh.SelectedItem.ToString();
