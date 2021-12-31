@@ -41,6 +41,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnLamMoi = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXepPhong = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
@@ -58,9 +59,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(1257, 755);
+            this.panel1.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel1.Size = new System.Drawing.Size(943, 613);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -71,18 +73,20 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(10, 60);
+            this.panel3.Location = new System.Drawing.Point(8, 49);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1237, 685);
+            this.panel3.Size = new System.Drawing.Size(927, 556);
             this.panel3.TabIndex = 1;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.khoaThiGridView);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 88);
+            this.panel7.Location = new System.Drawing.Point(0, 71);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1237, 597);
+            this.panel7.Size = new System.Drawing.Size(927, 485);
             this.panel7.TabIndex = 3;
             // 
             // khoaThiGridView
@@ -92,20 +96,22 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.khoaThiGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.khoaThiGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.khoaThiGridView.Location = new System.Drawing.Point(0, 0);
+            this.khoaThiGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.khoaThiGridView.Name = "khoaThiGridView";
             this.khoaThiGridView.ReadOnly = true;
             this.khoaThiGridView.RowHeadersWidth = 51;
             this.khoaThiGridView.RowTemplate.Height = 24;
-            this.khoaThiGridView.Size = new System.Drawing.Size(1237, 597);
+            this.khoaThiGridView.Size = new System.Drawing.Size(927, 485);
             this.khoaThiGridView.TabIndex = 0;
             this.khoaThiGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.khoaThiGridView_CellClick);
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 68);
+            this.panel6.Location = new System.Drawing.Point(0, 55);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1237, 20);
+            this.panel6.Size = new System.Drawing.Size(927, 16);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -114,9 +120,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.panel5.Controls.Add(this.btnTimKiem);
             this.panel5.Controls.Add(this.btnLamMoi);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 20);
+            this.panel5.Location = new System.Drawing.Point(0, 16);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1237, 48);
+            this.panel5.Size = new System.Drawing.Size(927, 39);
             this.panel5.TabIndex = 1;
             // 
             // txtTimKiem
@@ -126,9 +133,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTimKiem.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(884, 48);
+            this.txtTimKiem.Size = new System.Drawing.Size(662, 39);
             this.txtTimKiem.TabIndex = 15;
             // 
             // btnTimKiem
@@ -143,9 +151,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnTimKiem.IconColor = System.Drawing.Color.Black;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTimKiem.IconSize = 24;
-            this.btnTimKiem.Location = new System.Drawing.Point(884, 0);
+            this.btnTimKiem.Location = new System.Drawing.Point(662, 0);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(191, 48);
+            this.btnTimKiem.Size = new System.Drawing.Size(143, 39);
             this.btnTimKiem.TabIndex = 14;
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -165,9 +174,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnLamMoi.IconColor = System.Drawing.Color.Black;
             this.btnLamMoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLamMoi.IconSize = 24;
-            this.btnLamMoi.Location = new System.Drawing.Point(1075, 0);
+            this.btnLamMoi.Location = new System.Drawing.Point(805, 0);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(162, 48);
+            this.btnLamMoi.Size = new System.Drawing.Size(122, 39);
             this.btnLamMoi.TabIndex = 13;
             this.btnLamMoi.Text = "LÀM MỚI";
             this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,19 +189,45 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1237, 20);
+            this.panel4.Size = new System.Drawing.Size(927, 16);
             this.panel4.TabIndex = 0;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnXepPhong);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Location = new System.Drawing.Point(8, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1237, 50);
+            this.panel2.Size = new System.Drawing.Size(927, 41);
             this.panel2.TabIndex = 0;
+            // 
+            // btnXepPhong
+            // 
+            this.btnXepPhong.BackColor = System.Drawing.Color.Transparent;
+            this.btnXepPhong.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnXepPhong.FlatAppearance.BorderSize = 0;
+            this.btnXepPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXepPhong.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXepPhong.ForeColor = System.Drawing.Color.Black;
+            this.btnXepPhong.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnXepPhong.IconColor = System.Drawing.Color.Black;
+            this.btnXepPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXepPhong.IconSize = 24;
+            this.btnXepPhong.Location = new System.Drawing.Point(339, 0);
+            this.btnXepPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXepPhong.Name = "btnXepPhong";
+            this.btnXepPhong.Size = new System.Drawing.Size(230, 41);
+            this.btnXepPhong.TabIndex = 5;
+            this.btnXepPhong.Text = "SẮP XẾP PHÒNG THI";
+            this.btnXepPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXepPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXepPhong.UseVisualStyleBackColor = false;
+            this.btnXepPhong.Click += new System.EventHandler(this.btnXepPhong_Click);
             // 
             // btnThem
             // 
@@ -205,9 +241,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnThem.IconColor = System.Drawing.Color.Black;
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.IconSize = 24;
-            this.btnThem.Location = new System.Drawing.Point(832, 0);
+            this.btnThem.Location = new System.Drawing.Point(569, 0);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(190, 50);
+            this.btnThem.Size = new System.Drawing.Size(197, 41);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "THÊM KHÓA THI";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,9 +264,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnXoa.IconColor = System.Drawing.Color.Black;
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXoa.IconSize = 24;
-            this.btnXoa.Location = new System.Drawing.Point(1022, 0);
+            this.btnXoa.Location = new System.Drawing.Point(766, 0);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(215, 50);
+            this.btnXoa.Size = new System.Drawing.Size(161, 41);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "XÓA KHÓA THI";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -239,11 +277,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             // 
             // Gui_KhoaThi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 755);
+            this.ClientSize = new System.Drawing.Size(943, 613);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Gui_KhoaThi";
             this.Text = "Gui_GiaTour";
             this.panel1.ResumeLayout(false);
@@ -272,5 +309,6 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
         private System.Windows.Forms.TextBox txtTimKiem;
         private IconButton btnXoa;
         private IconButton btnThem;
+        private IconButton btnXepPhong;
     }
 }

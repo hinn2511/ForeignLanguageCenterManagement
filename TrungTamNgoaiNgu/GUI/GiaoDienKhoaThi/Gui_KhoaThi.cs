@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
 using TrungTamNgoaiNgu.DTO;
+using TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh;
 using static TrungTamNgoaiNgu.GUI.Helper;
 
 namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
@@ -87,5 +88,15 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             khoaThiGridView.DataSource = dsKhoaThi;
         }
 
+        private void btnXepPhong_Click(object sender, System.EventArgs e)
+        {
+            if (currentIndex < 0)
+            {
+                ShowMessage("Vui lòng chọn khóa thi cần xóa", "Lỗi");
+                return;
+            }
+            Gui_LapDanhSachThiSinh lapDanhSachThiSinh = new Gui_LapDanhSachThiSinh(dsKhoaThi[currentIndex]);
+            lapDanhSachThiSinh.ShowDialog();
+        }
     }
 }
