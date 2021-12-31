@@ -58,28 +58,56 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\Bus_PhongThi.cs" />
+    <Compile Include="BUS\Bus_KhoaThi.cs" />
     <Compile Include="BUS\Bus_ThiSinh.cs" />
+    <Compile Include="DAL\Dal_PhongThi.cs" />
     <Compile Include="DAL\Dal_KhoaThi.cs" />
     <Compile Include="DAL\Dal_ThiSinh.cs" />
     <Compile Include="DTO\Dto_KhoaThi.cs" />
     <Compile Include="DTO\Dto_PhieuDangKy.cs" />
+    <Compile Include="DTO\Dto_PhongThi.cs" />
     <Compile Include="DTO\Dto_ThiSinh.cs" />
-    <Compile Include="GUI\GiaoDienChinh.cs">
+    <Compile Include="GUI\GiaoDienChinh\Gui_GiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GiaoDienChinh.Designer.cs">
-      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Gui_GiaoDienChinh\Gui_GiaoDienChinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Gui_GiaoDienChinh\Gui_GiaoDienChinh.designer.cs">
+    <Compile Include="GUI\GiaoDienChinh\Gui_GiaoDienChinh.designer.cs">
       <DependentUpon>Gui_GiaoDienChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_ThiSinh\Gui_TS.cs">
+    <Compile Include="GUI\GiaoDienKhoaThi\Gui_KhoaThi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_ThiSinh\Gui_TS.designer.cs">
+    <Compile Include="GUI\GiaoDienKhoaThi\Gui_KhoaThi.designer.cs">
+      <DependentUpon>Gui_KhoaThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoDienKhoaThi\Gui_ThemKhoaThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoDienKhoaThi\Gui_ThemKhoaThi.designer.cs">
+      <DependentUpon>Gui_ThemKhoaThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoDienPhongThi\Gui_PhongThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoDienPhongThi\Gui_PhongThi.designer.cs">
+      <DependentUpon>Gui_PhongThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoDienPhongThi\Gui_ThemPhongThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoDienPhongThi\Gui_ThemPhongThi.designer.cs">
+      <DependentUpon>Gui_ThemPhongThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoDienThiSinh\Gui_ThemTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoDienThiSinh\Gui_ThemTS.designer.cs">
+      <DependentUpon>Gui_ThemTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoDienThiSinh\Gui_TS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoDienThiSinh\Gui_TS.designer.cs">
       <DependentUpon>Gui_TS.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Mau1.cs">
@@ -88,6 +116,7 @@
     <Compile Include="GUI\Mau1.designer.cs">
       <DependentUpon>Mau1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLTTNN.designer.cs">
@@ -95,13 +124,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTTNN.dbml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\GiaoDienChinh.resx">
-      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Gui_GiaoDienChinh\Gui_GiaoDienChinh.resx">
+    <EmbeddedResource Include="GUI\GiaoDienChinh\Gui_GiaoDienChinh.resx">
       <DependentUpon>Gui_GiaoDienChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_ThiSinh\Gui_TS.resx">
+    <EmbeddedResource Include="GUI\GiaoDienKhoaThi\Gui_KhoaThi.resx">
+      <DependentUpon>Gui_KhoaThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoDienKhoaThi\Gui_ThemKhoaThi.resx">
+      <DependentUpon>Gui_ThemKhoaThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoDienPhongThi\Gui_PhongThi.resx">
+      <DependentUpon>Gui_PhongThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoDienPhongThi\Gui_ThemPhongThi.resx">
+      <DependentUpon>Gui_ThemPhongThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoDienThiSinh\Gui_ThemTS.resx">
+      <DependentUpon>Gui_ThemTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoDienThiSinh\Gui_TS.resx">
       <DependentUpon>Gui_TS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Mau1.resx">

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using TrungTamNgoaiNgu.GUI.GUITS;
+using TrungTamNgoaiNgu.GUI.GiaoDienChinh;
 
 namespace TrungTamNgoaiNgu
 {
@@ -14,7 +14,7 @@ namespace TrungTamNgoaiNgu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUITS());
+            Application.Run(new Gui_GiaoDienChinh());
         }
     }
 }

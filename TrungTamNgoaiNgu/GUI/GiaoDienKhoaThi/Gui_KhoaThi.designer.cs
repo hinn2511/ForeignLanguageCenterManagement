@@ -1,6 +1,8 @@
-﻿namespace TrungTamNgoaiNgu.GUI.GUITS
+﻿using FontAwesome.Sharp;
+
+namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
 {
-    partial class GUITS
+    partial class Gui_KhoaThi
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dataGridViewTS = new System.Windows.Forms.DataGridView();
+            this.khoaThiGridView = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -39,16 +41,12 @@
             this.btnLamMoi = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnChiTiet = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaThiGridView)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,34 +78,34 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.dataGridViewTS);
+            this.panel7.Controls.Add(this.khoaThiGridView);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 93);
+            this.panel7.Location = new System.Drawing.Point(0, 88);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1237, 592);
+            this.panel7.Size = new System.Drawing.Size(1237, 597);
             this.panel7.TabIndex = 3;
             // 
-            // dataGridViewTS
+            // khoaThiGridView
             // 
-            this.dataGridViewTS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewTS.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTS.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewTS.Name = "dataGridViewTS";
-            this.dataGridViewTS.ReadOnly = true;
-            this.dataGridViewTS.RowHeadersWidth = 51;
-            this.dataGridViewTS.RowTemplate.Height = 24;
-            this.dataGridViewTS.Size = new System.Drawing.Size(1237, 592);
-            this.dataGridViewTS.TabIndex = 0;
-            this.dataGridViewTS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTS_CellContentClick);
+            this.khoaThiGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.khoaThiGridView.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.khoaThiGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.khoaThiGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.khoaThiGridView.Location = new System.Drawing.Point(0, 0);
+            this.khoaThiGridView.Name = "khoaThiGridView";
+            this.khoaThiGridView.ReadOnly = true;
+            this.khoaThiGridView.RowHeadersWidth = 51;
+            this.khoaThiGridView.RowTemplate.Height = 24;
+            this.khoaThiGridView.Size = new System.Drawing.Size(1237, 597);
+            this.khoaThiGridView.TabIndex = 0;
+            this.khoaThiGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.khoaThiGridView_CellClick);
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 68);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1237, 25);
+            this.panel6.Size = new System.Drawing.Size(1237, 20);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -135,7 +133,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.LightGray;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTimKiem.FlatAppearance.BorderSize = 0;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,6 +151,7 @@
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnLamMoi
             // 
@@ -174,6 +173,7 @@
             this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLamMoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // panel4
             // 
@@ -185,11 +185,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnChiTiet);
-            this.panel2.Controls.Add(this.iconButton1);
-            this.panel2.Controls.Add(this.iconButton2);
             this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(10, 10);
@@ -197,148 +193,63 @@
             this.panel2.Size = new System.Drawing.Size(1237, 50);
             this.panel2.TabIndex = 0;
             // 
-            // btnChiTiet
-            // 
-            this.btnChiTiet.BackColor = System.Drawing.Color.Orange;
-            this.btnChiTiet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnChiTiet.FlatAppearance.BorderSize = 0;
-            this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChiTiet.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnChiTiet.ForeColor = System.Drawing.Color.White;
-            this.btnChiTiet.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
-            this.btnChiTiet.IconColor = System.Drawing.Color.White;
-            this.btnChiTiet.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnChiTiet.IconSize = 24;
-            this.btnChiTiet.Location = new System.Drawing.Point(694, 0);
-            this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.Size = new System.Drawing.Size(153, 50);
-            this.btnChiTiet.TabIndex = 13;
-            this.btnChiTiet.Text = "CHI TIẾT";
-            this.btnChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChiTiet.UseVisualStyleBackColor = false;
-            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Tag;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 24;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(149, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(151, 50);
-            this.iconButton1.TabIndex = 12;
-            this.iconButton1.Text = "MENU 2";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iconButton2.ForeColor = System.Drawing.Color.Black;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 24;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(149, 50);
-            this.iconButton2.TabIndex = 9;
-            this.iconButton2.Text = "MENU 1";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnThem.IconColor = System.Drawing.Color.White;
+            this.btnThem.IconColor = System.Drawing.Color.Black;
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.IconSize = 24;
-            this.btnThem.Location = new System.Drawing.Point(847, 0);
+            this.btnThem.Location = new System.Drawing.Point(832, 0);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(130, 50);
-            this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "THÊM";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.Size = new System.Drawing.Size(190, 50);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "THÊM KHÓA THI";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSua.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Wrench;
-            this.btnSua.IconColor = System.Drawing.Color.White;
-            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSua.IconSize = 24;
-            this.btnSua.Location = new System.Drawing.Point(977, 0);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(130, 50);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "SỬA";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSua.UseVisualStyleBackColor = false;
-            // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.Crimson;
+            this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnXoa.IconColor = System.Drawing.Color.White;
+            this.btnXoa.IconColor = System.Drawing.Color.Black;
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXoa.IconSize = 24;
-            this.btnXoa.Location = new System.Drawing.Point(1107, 0);
+            this.btnXoa.Location = new System.Drawing.Point(1022, 0);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(130, 50);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "XÓA";
+            this.btnXoa.Size = new System.Drawing.Size(215, 50);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "XÓA KHÓA THI";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // GUITS
+            // Gui_KhoaThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 755);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "GUITS";
-            this.Text = "Thí sinh";
+            this.Name = "Gui_KhoaThi";
+            this.Text = "Gui_GiaTour";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaThiGridView)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -351,19 +262,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView dataGridViewTS;
+        private System.Windows.Forms.DataGridView khoaThiGridView;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private FontAwesome.Sharp.IconButton btnLamMoi;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton btnThem;
-        private FontAwesome.Sharp.IconButton btnSua;
-        private FontAwesome.Sharp.IconButton btnXoa;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private FontAwesome.Sharp.IconButton btnChiTiet;
+        private IconButton btnXoa;
+        private IconButton btnThem;
     }
 }

@@ -2,8 +2,11 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi;
+using TrungTamNgoaiNgu.GUI.GiaoDienPhongThi;
+using TrungTamNgoaiNgu.GUI.GiaoDienThiSinh;
 
-namespace TrungTamNgoaiNgu.GUI.Gui_GiaoDienChinh
+namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
 {
     public partial class Gui_GiaoDienChinh : Form
     {
@@ -17,6 +20,8 @@ namespace TrungTamNgoaiNgu.GUI.Gui_GiaoDienChinh
             leftBorderBtn.Size = new Size(7, 70);
             panelMenu.Controls.Add(leftBorderBtn);
             Reset();
+            OpenChildForm(new Gui_KhoaThi());
+            lblTitleChildForm.Text = "KHÓA THI";
 
         }
 
@@ -26,7 +31,7 @@ namespace TrungTamNgoaiNgu.GUI.Gui_GiaoDienChinh
             {
                 DisableButton();
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.Chocolate;
+                currentBtn.BackColor = Color.DarkGray;
                 currentBtn.ForeColor = Color.White;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = Color.White;
@@ -45,7 +50,7 @@ namespace TrungTamNgoaiNgu.GUI.Gui_GiaoDienChinh
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.Transparent;
-                currentBtn.ForeColor = Color.White;
+                currentBtn.ForeColor = Color.Black;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.White;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -76,46 +81,37 @@ namespace TrungTamNgoaiNgu.GUI.Gui_GiaoDienChinh
             childForm.BringToFront();
             childForm.Show();
         }
-        private void btnKhachHang_Click(object sender, EventArgs e)
+        private void btnNhapDiem_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             //OpenChildForm(new Gui_KhachHang());
-            lblTitleChildForm.Text = "KHÁCH HÀNG";
+            lblTitleChildForm.Text = "NHẬP ĐIỂM";
         }
 
-        private void btnTour_Click(object sender, EventArgs e)
+        private void btnThiSinh_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(new Gui_Tour());
-            lblTitleChildForm.Text = "TOUR";
+            OpenChildForm(new GUITS());
+            lblTitleChildForm.Text = "THÍ SINH";
 
         }
 
-        private void btnDiaDiem_Click(object sender, EventArgs e)
+        private void btnKhoaThi_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(new Gui_DiaDiem());
-            lblTitleChildForm.Text = "ĐỊA ĐIỂM";
+            OpenChildForm(new Gui_KhoaThi());
+            lblTitleChildForm.Text = "KHÓA THI";
         }
 
-        private void btnDoanDuLich_Click(object sender, EventArgs e)
+        private void btnPhongThi_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(new Gui_DoanDuLich());
-            lblTitleChildForm.Text = "ĐOÀN DU LỊCH";
+            OpenChildForm(new Gui_PhongThi());
+            lblTitleChildForm.Text = "PHÒNG THI";
         }
 
-        private void btnNhanVien_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            //OpenChildForm(new Gui_NhanVien());
-            lblTitleChildForm.Text = "NHÂN VIÊN";
-        }
 
-        private void imgLogo_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {

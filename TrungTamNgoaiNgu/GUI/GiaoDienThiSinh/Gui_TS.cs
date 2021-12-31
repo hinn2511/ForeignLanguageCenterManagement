@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
 
-namespace TrungTamNgoaiNgu.GUI.GUITS
+namespace TrungTamNgoaiNgu.GUI.GiaoDienThiSinh
 {
     public partial class GUITS : Form
     {
@@ -69,7 +69,7 @@ namespace TrungTamNgoaiNgu.GUI.GUITS
 
         private void dataGridViewTS_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == 0) return;
+            if (e.RowIndex < 0) return;
 
             if (dataGridViewTS.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {

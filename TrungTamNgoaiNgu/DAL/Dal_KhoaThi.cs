@@ -27,6 +27,12 @@ namespace TrungTamNgoaiNgu.DAL
             return khoaThi;
         }
 
+        public KhoaThi KhoaThiTaiThoiDiem(DateTime thoigian)
+        {
+            var khoaThi = context.KhoaThis.FirstOrDefault(kt => kt.NgayThi.Month == thoigian.Month && kt.NgayThi.Year == thoigian.Year);
+            return khoaThi;
+        }
+
 
         public bool ThemKhoaThi(KhoaThi khoaThi)
         {
@@ -37,13 +43,33 @@ namespace TrungTamNgoaiNgu.DAL
                 context.SubmitChanges();
                 return true;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                Console.WriteLine(e.InnerException);
                 return false;
             }
         }
 
+        public bool XoaKhoaThi(int id)
+        {
+            var kt = context.KhoaThis.FirstOrDefault(t => t.Id == id);
+
+            if (kt != null)
+            {
+                context.KhoaThis.DeleteOnSubmit(kt);
+
+                try
+                {
+                    context.SubmitChanges();
+                    return true;
+                }
+                catch (SqlException)
+                {
+                    return false;
+                }
+            }
+            return false;
+
+        }
 
     }
 }
