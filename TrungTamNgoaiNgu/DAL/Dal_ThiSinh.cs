@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using TrungTamNgoaiNgu.DTO;
 
 namespace TrungTamNgoaiNgu.DAL
 {
@@ -8,9 +9,21 @@ namespace TrungTamNgoaiNgu.DAL
     {
         QLTTNNDataContext context = new QLTTNNDataContext();
 
-        public List<ThiSinh> LayDanhSachThiSinh()
+        public List<Dto_ThiSinh> LayDanhSachThiSinh()
         {
-            List<ThiSinh> TS = context.ThiSinhs.Select(ts => ts).ToList();
+            List<Dto_ThiSinh> TS = context.ThiSinhs.Select(ts => new Dto_ThiSinh
+            {
+                Id = ts.Id,
+                HoTen = ts.HoTen,
+                GioiTinh = ts.GioiTinh,
+                NgaySinh = ts.NgaySinh,
+                NoiSinh = ts.NoiSinh,
+                CMND = ts.CMND,
+                NgayCap = ts.NgayCap,
+                NoiCap = ts.NoiCap,
+                SDT = ts.SDT,
+                Email = ts.Email,
+            }).ToList();
             return TS;
         }
 

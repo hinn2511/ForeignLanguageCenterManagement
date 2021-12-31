@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
+using TrungTamNgoaiNgu.DTO;
 
 namespace TrungTamNgoaiNgu.GUI.GiaoDienThiSinh
 {
     public partial class GUITS : Form
     {
-        private List<ThiSinh> dsTS = new List<ThiSinh>();
+        private List<Dto_ThiSinh> dsTS = new List<Dto_ThiSinh>();
         int currentIndex;
         public GUITS()
         {
@@ -33,7 +34,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienThiSinh
         private void CapNhatDanhSachTS()
         {
             Bus_ThiSinh bus = new Bus_ThiSinh();
-            dsTS = bus.LayDanhSachTS();
+            dsTS = bus.LayDanhSachThiSinh();
             dataGridViewTS.DataSource = dsTS;
         }
 
