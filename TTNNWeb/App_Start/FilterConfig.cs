@@ -1,4 +1,7 @@
-﻿namespace Web
+﻿using System.Web;
+using System.Web.Mvc;
+
+namespace TTNNWeb
 {
     public class FilterConfig
     {

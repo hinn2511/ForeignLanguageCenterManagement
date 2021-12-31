@@ -1,12 +1,15 @@
-﻿
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Web")]
+[assembly: AssemblyTitle("TTNNWeb")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Web")]
+[assembly: AssemblyProduct("TTNNWeb")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -17,7 +20,7 @@
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6fd9ab5f-5b7d-45fa-bc14-2442c2f8e8f9")]
+[assembly: Guid("ec22d2da-2e9f-4966-aa28-1aa077871898")]
 
 // Version information for an assembly consists of the following four values:
 //
