@@ -2,7 +2,7 @@
 
 namespace TrungTamNgoaiNgu.DTO
 {
-    internal class Dto_ThiSinh
+    public class Dto_ThiSinh
     {
         public int Id { get; set; }
         public string HoTen { get; set; }

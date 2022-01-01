@@ -5,7 +5,7 @@ using TrungTamNgoaiNgu.DTO;
 
 namespace TrungTamNgoaiNgu.BUS
 {
-    internal class Bus_ThiSinh
+    public class Bus_ThiSinh
     {
         Dal_ThiSinh dal = new Dal_ThiSinh();
 
@@ -25,13 +25,20 @@ namespace TrungTamNgoaiNgu.BUS
             return dal.XoaTs(id);
         }
 
-        public List<ThiSinh> TimKiemTS(List<ThiSinh> dsTs, string key)
+        public List<Dto_ThiSinh> TimKiemTS(List<Dto_ThiSinh> dsTs, string key)
         {
-            var res = dsTs.Where(t => t.HoTen.Contains(key)).ToList();
-            return res;
+            List<Dto_ThiSinh> kq= new List<Dto_ThiSinh>();
+            foreach (var item in dsTs)
+            {
+                if (item.HoTen.Contains(key))
+                {
+                    kq.Add(item);
+                }
+            }
+            return kq;
         }
 
-       public ThiSinh LayThongTinTS(int id)
+        public ThiSinh LayThongTinTS(int id)
         {
            return dal.LayThongTinTS(id);
         }
