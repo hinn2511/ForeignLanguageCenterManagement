@@ -1,0 +1,96 @@
+﻿@model TrungTamNgoaiNgu.DTO.Dto_ThiSinh
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa thí sinh</h2>
+
+<h3>Bạn có muốn xóa thí sinh</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Họ tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Giới tính
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh)
+        </dd>
+
+        <dt>
+            Ngày sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh, "{0:dd/MM/yyyy}")
+        </dd>
+
+        <dt>
+            Nơi sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiSinh)
+        </dd>
+
+        <dt>
+           CMND
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CMND)
+        </dd>
+
+        <dt>
+           Ngày cấp
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCap, "{0:dd/MM/yyyy}")
+        </dd>
+
+        <dt>
+            Nơi cấp
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiCap)
+        </dd>
+
+        <dt>
+           SDT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

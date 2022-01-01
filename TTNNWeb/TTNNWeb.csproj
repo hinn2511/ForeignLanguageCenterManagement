@@ -164,6 +164,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ThiSinh\Index.cshtml" />
+    <Content Include="Views\ThiSinh\Create.cshtml" />
+    <Content Include="Views\ThiSinh\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

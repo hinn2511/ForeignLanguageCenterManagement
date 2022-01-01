@@ -5,5 +5,98 @@
 
 <h2>Quản lý thí sinh</h2>
 
+<p>
+    @Html.ActionLink("Thêm thí sinh mới", "Create")
+</p>
 
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Tìm kiếm theo tên: <input type="text" name="SearchString" />
+            <input type="submit" value="Tìm kiếm" class="btn btn-default" /> |
+            @Html.ActionLink("Làm mới", "Index")
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mã thí sinh
+            </th>
+            <th>
+                Họ tên
+            </th>
+            <th>
+                Giới tính
+            </th>
+            <th>
+                Ngày sinh
+            </th>
+            <th>
+                Nơi sinh
+            </th>
+            <th>
+                CMND
+            </th>
+            <th>
+                Ngày cấp
+            </th>
+            <th>
+                Nơi cấp
+            </th>
+            <th>
+                SĐT
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Hành động
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.ValueFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioiTinh)
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.NgaySinh, "{0:dd/MM/yyyy}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiSinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CMND)
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.NgayCap, "{0:dd/MM/yyyy}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiCap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+             </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit/" + @item.Id, @item.Id, item)  |
+                @Html.ActionLink("Xóa", "Delete/" + @item.Id, @item.Id, item)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
 
