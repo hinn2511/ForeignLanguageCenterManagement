@@ -35,7 +35,7 @@ namespace TrungTamNgoaiNgu.DAL
                 context.SubmitChanges();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -54,7 +54,7 @@ namespace TrungTamNgoaiNgu.DAL
                     context.SubmitChanges();
                     return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }

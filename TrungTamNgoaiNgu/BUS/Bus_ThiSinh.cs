@@ -58,5 +58,22 @@ namespace TrungTamNgoaiNgu.BUS
             ts.Email = dto.Email;
             return ts;
         }
+
+        public Dto_ThiSinh convertToDto (ThiSinh ts)
+        {
+            Dto_ThiSinh dto = new Dto_ThiSinh();
+            dto.Id = ts.Id;
+            dto.HoTen = ts.HoTen;
+            dto.GioiTinh=ts.GioiTinh;
+            dto.NgaySinh=ts.NgaySinh;
+            dto.NoiSinh =ts.NoiSinh;
+            dto.CMND = ts.CMND;
+            dto.NgayCap=ts.NgayCap;
+            dto.NoiCap =ts.NoiCap;
+            dto.Email = ts.Email;
+            dto.SDT = ts.SDT;
+            return dto;
+
+        }
     }
 }
