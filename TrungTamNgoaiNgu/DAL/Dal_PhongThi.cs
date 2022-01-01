@@ -23,9 +23,28 @@ namespace TrungTamNgoaiNgu.DAL
             return dsPhongThi;
         }
 
+        public List<Dto_PhongThi> DanhSachPhongThiTheoKhoaVaTrinhDo(int khoaThiId, string trinhDo)
+        {
+            var dsPhongThi = context.PhongThis.Where(pt => pt.ID_KhoaThi == khoaThiId && pt.TrinhDo == trinhDo).Select(pt => new Dto_PhongThi
+            {
+                Id = pt.Id,
+                TenPhongThi = pt.TenPhongThi,
+                CaThi = pt.CaThi,
+                TrinhDo = pt.TrinhDo,
+                ID_KhoaThi = pt.ID_KhoaThi,
+            }).ToList();
+            return dsPhongThi;
+        }
+
         public int SoLuongPhongThiTheoKhoa(int khoaThiId)
         {
             var sl = context.PhongThis.Where(pt => pt.ID_KhoaThi == khoaThiId).Count();
+            return sl;
+        }
+
+        public int SoLuongPhongThiTheoKhoaVaTrinhDo(int khoaThiId, string trinhDo)
+        {
+            var sl = context.PhongThis.Where(pt => pt.ID_KhoaThi == khoaThiId && pt.TrinhDo == trinhDo).Count();
             return sl;
         }
 

@@ -29,9 +29,9 @@ namespace TrungTamNgoaiNgu.DAL
             return dsThi;
         }
 
-        public int SoLuongThiSinhTheoKhoa(int khoaThiId, string trinhDo)
+        public int SoLuongThiSinhTheoKhoa(int khoaThiId)
         {
-            int sl = context.DanhSachPhongThis.Where(t => t.PhongThi.ID_KhoaThi == khoaThiId && t.PhongThi.TrinhDo == trinhDo).Count();
+            int sl = context.DanhSachPhongThis.Where(t => t.PhongThi.ID_KhoaThi == khoaThiId).Count();
             return sl;
         }
 

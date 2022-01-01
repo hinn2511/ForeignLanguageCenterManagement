@@ -186,6 +186,7 @@
     <ProjectReference Include="..\TrungTamNgoaiNgu\TrungTamNgoaiNgu.csproj">
       <Project>{c3e8b01b-995f-40f8-981e-7febbff021c4}</Project>
       <Name>TrungTamNgoaiNgu</Name>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

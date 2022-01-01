@@ -43,7 +43,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnLapDS = new FontAwesome.Sharp.IconButton();
             this.btnDanhSach = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxKhoaThi = new System.Windows.Forms.ComboBox();
@@ -201,7 +201,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
             // 
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnXoa);
-            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.btnLapDS);
             this.panel2.Controls.Add(this.btnDanhSach);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.cbxKhoaThi);
@@ -258,27 +258,28 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // iconButton1
+            // btnLapDS
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 24;
-            this.iconButton1.Location = new System.Drawing.Point(765, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(235, 50);
-            this.iconButton1.TabIndex = 13;
-            this.iconButton1.Text = "LẬP DANH SÁCH THI";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnLapDS.BackColor = System.Drawing.Color.Transparent;
+            this.btnLapDS.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLapDS.FlatAppearance.BorderSize = 0;
+            this.btnLapDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLapDS.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLapDS.ForeColor = System.Drawing.Color.Black;
+            this.btnLapDS.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.btnLapDS.IconColor = System.Drawing.Color.Black;
+            this.btnLapDS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLapDS.IconSize = 24;
+            this.btnLapDS.Location = new System.Drawing.Point(765, 0);
+            this.btnLapDS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLapDS.Name = "btnLapDS";
+            this.btnLapDS.Size = new System.Drawing.Size(235, 50);
+            this.btnLapDS.TabIndex = 13;
+            this.btnLapDS.Text = "LẬP DANH SÁCH THI";
+            this.btnLapDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLapDS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLapDS.UseVisualStyleBackColor = false;
+            this.btnLapDS.Click += new System.EventHandler(this.btnLapDS_Click);
             // 
             // btnDanhSach
             // 
@@ -363,7 +364,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         private System.Windows.Forms.Label label4;
         private IconButton btnThem;
         private IconButton btnXoa;
-        private IconButton iconButton1;
+        private IconButton btnLapDS;
         private IconButton btnDanhSach;
     }
 }

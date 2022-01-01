@@ -128,5 +128,22 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
                 return;
         }
 
+        private void btnLapDS_Click(object sender, System.EventArgs e)
+        {
+            if (!ChonKhoaThi())
+                return;
+            if (bus.DaTaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id))
+            {
+                ShowMessage("Khóa thi này đã tạo danh sách thi.", "Lỗi");
+                return;
+            }
+            if (!bus.CoTheTaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id))
+            {
+                ShowMessage("Số lượng phòng thi không đủ. Vui lòng tạo thêm", "Lỗi");
+                return;
+            }
+            bus.TaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
+            ShowMessage("Đã xếp lịch thi thành công", "Thành công");
+        }
     }
 }
