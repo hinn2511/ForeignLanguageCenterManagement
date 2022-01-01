@@ -9,5 +9,19 @@ namespace TrungTamNgoaiNgu.GUI
         {
             System.Windows.MessageBox.Show(message, type, (MessageBoxButton)MessageBoxButtons.OK);
         }
+
+        public static bool ShowConfirmDialog(string message, string type)
+        {
+            MessageBoxResult confirmResult = System.Windows.MessageBox.Show(message,type, MessageBoxButton.YesNo);
+
+            if (confirmResult == MessageBoxResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

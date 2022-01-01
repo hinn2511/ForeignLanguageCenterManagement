@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using TrungTamNgoaiNgu.DAL;
 using TrungTamNgoaiNgu.DTO;
 
@@ -15,6 +17,13 @@ namespace TrungTamNgoaiNgu.BUS
 
         Dal_PhieuDangKy dal_phieudk = new Dal_PhieuDangKy();
 
+        public bool DaTaoDanhSachThi(int khoaThiId)
+        {
+            if (dal_dsphongthi.SoLuongThiSinhTheoKhoa(khoaThiId) > 0)
+                return true;
+            return false;
+        }
+
         public bool CoTheTaoDanhSachThi(int khoaThiId)
         {
             int soLuongThiSinhA2 = dal_phieudk.LaySoLuongDangKy(khoaThiId, "A2");
@@ -26,12 +35,7 @@ namespace TrungTamNgoaiNgu.BUS
             return true;
         }
 
-        public bool DaTaoDanhSachThi(int khoaThiId)
-        {
-            if(dal_dsphongthi.SoLuongThiSinhTheoKhoa(khoaThiId) > 0)
-                return true;
-            return false;
-        }
+
 
         public void TaoDanhSachThi(int khoaThiId)
         {
@@ -44,11 +48,13 @@ namespace TrungTamNgoaiNgu.BUS
             {
                 Dto_DSPhongThi pt = new Dto_DSPhongThi();
                 pt.Id_ThiSinh = item.Id_ThiSinh;
-                pt.Id_PhongThi = DSPTA2[(num / 36)].Id;
+                pt.Id_PhongThi = DSPTA2[(num / 35)].Id;
                 if (num < 10)
                     pt.SBD = "A200" + num.ToString();
-                else
+                if (num > 10 && num < 100)
                     pt.SBD = "A20" + num.ToString();
+                if (num > 100)
+                    pt.SBD = "A2" + num.ToString();
                 pt.DiemDoc = 0;
                 pt.DiemNghe = 0;
                 pt.DiemViet = 0;
@@ -61,11 +67,13 @@ namespace TrungTamNgoaiNgu.BUS
             {
                 Dto_DSPhongThi pt = new Dto_DSPhongThi();
                 pt.Id_ThiSinh = item.Id_ThiSinh;
-                pt.Id_PhongThi = DSPTB1[(num / 36)].Id;
+                pt.Id_PhongThi = DSPTB1[(num / 35)].Id;
                 if (num < 10)
                     pt.SBD = "B100" + num.ToString();
-                else
+                if (num > 10 && num < 100)
                     pt.SBD = "B10" + num.ToString();
+                if (num > 100)
+                    pt.SBD = "B1" + num.ToString();
                 pt.DiemDoc = 0;
                 pt.DiemNghe = 0;
                 pt.DiemViet = 0;
@@ -74,7 +82,6 @@ namespace TrungTamNgoaiNgu.BUS
                 dal_dsphongthi.ThemDachSachThi(convertToEntity(pt));
             }
         }
-
 
         public DanhSachPhongThi convertToEntity(Dto_DSPhongThi dto)
         {
@@ -90,17 +97,15 @@ namespace TrungTamNgoaiNgu.BUS
             return dspt;
         }
 
-
-    
-
-    public List<Dto_KhoaThi> LayDanhSachKhoaThi()
+        public List<Dto_KhoaThi> LayDanhSachKhoaThi()
         {
             return dal_khoaThi.DanhSachKhoaThi();
         }
 
         public List<Dto_PhongThi> LayDanhSachPhongThi(int khoaThiId)
         {
-            return dal_phongthi.DanhSachPhongThiTheoKhoa(khoaThiId);
+            var dsPhongThi = dal_phongthi.DanhSachPhongThiTheoKhoa(khoaThiId);
+            return dsPhongThi.Any() ? dsPhongThi : null;
         }
 
         public List<Dto_PhongThi> TimKiemPhongThi(List<Dto_PhongThi> dsPhongThi, string key)

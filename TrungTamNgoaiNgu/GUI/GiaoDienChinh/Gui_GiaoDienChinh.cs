@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi;
+using TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem;
 using TrungTamNgoaiNgu.GUI.GiaoDienPhongThi;
 using TrungTamNgoaiNgu.GUI.GiaoDienThiSinh;
 
@@ -84,7 +85,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
         private void btnNhapDiem_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(new Gui_KhachHang());
+            OpenChildForm(new Gui_NhapDiem());
             lblTitleChildForm.Text = "NHẬP ĐIỂM";
         }
 

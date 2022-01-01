@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
 using TrungTamNgoaiNgu.DTO;
+using TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh;
 using static TrungTamNgoaiNgu.GUI.Helper;
 
 namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
@@ -48,6 +49,11 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         {
             if (!ChonKhoaThi())
                 return;
+            if (bus.DaTaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id))
+            {
+                ShowMessage("Khóa thi này đã tạo danh sách thi. Không thể tạo thêm phòng thi.", "Lỗi");
+                return;
+            }
             Gui_ThemPhongThi themPhongThi = new Gui_ThemPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex]);
             themPhongThi.ShowDialog();
             LayDanhSachPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
@@ -57,6 +63,11 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         {
             if (!ChonKhoaThi())
                 return;
+            if (bus.DaTaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id))
+            {
+                ShowMessage("Khóa thi này đã tạo danh sách thi. Không thể xóa phòng thi.", "Lỗi");
+                return;
+            }
             if (currentIndex < 0)
             {
                 ShowMessage("Vui lòng chọn phòng thi cần xóa", "Lỗi");
@@ -109,7 +120,8 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
 
         private void cbxKhoaThi_DropDownClosed(object sender, System.EventArgs e)
         {
-            LayDanhSachPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
+            if (cbxKhoaThi.SelectedIndex > -1)
+                LayDanhSachPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
         }
 
         private bool ChonKhoaThi()
@@ -126,6 +138,13 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         {
             if (!ChonKhoaThi())
                 return;
+            if (currentIndex < 0)
+            {
+                ShowMessage("Vui lòng chọn phòng thi cần xem danh sách", "Lỗi");
+                return;
+            }
+            Gui_DSThiSinh dsThiSinhThi = new Gui_DSThiSinh(dsPhongThi[currentIndex]);
+            dsThiSinhThi.ShowDialog();
         }
 
         private void btnLapDS_Click(object sender, System.EventArgs e)
@@ -142,8 +161,11 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
                 ShowMessage("Số lượng phòng thi không đủ. Vui lòng tạo thêm", "Lỗi");
                 return;
             }
-            bus.TaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
-            ShowMessage("Đã xếp lịch thi thành công", "Thành công");
+            if(ShowConfirmDialog("Bạn có chắc muốn lập danh sách thi? Danh sách phòng thi sau khi sắp xếp sẽ không thể thay đổi.", "Xác nhận"))
+            {
+                bus.TaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
+                ShowMessage("Đã xếp lịch thi thành công", "Thành công");
+            }
         }
     }
 }

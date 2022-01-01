@@ -29,6 +29,40 @@ namespace TrungTamNgoaiNgu.DAL
             return dsThi;
         }
 
+        public List<Dto_DSPhongThi> KetQuaTheoSDT(string sdt)
+        {
+            var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.SDT == sdt).Select(t => new Dto_DSPhongThi
+            {
+                Id = t.Id,
+                TenThiSinh = t.ThiSinh.HoTen,
+                Id_PhongThi = t.Id_PhongThi,
+                Id_ThiSinh = t.Id_ThiSinh,
+                SBD = t.SBD,
+                DiemDoc = (double)t.DiemDoc,
+                DiemNghe = (double)t.DiemNghe,
+                DiemNoi = (double)t.DiemNoi,
+                DiemViet = (double)t.DiemViet,
+            }).ToList();
+            return dsThi;
+        }
+
+        public List<Dto_DSPhongThi> KetQuaTheoTen(string ten)
+        {
+            var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.HoTen == ten).Select(t => new Dto_DSPhongThi
+            {
+                Id = t.Id,
+                TenThiSinh = t.ThiSinh.HoTen,
+                Id_PhongThi = t.Id_PhongThi,
+                Id_ThiSinh = t.Id_ThiSinh,
+                SBD = t.SBD,
+                DiemDoc = (double)t.DiemDoc,
+                DiemNghe = (double)t.DiemNghe,
+                DiemNoi = (double)t.DiemNoi,
+                DiemViet = (double)t.DiemViet,
+            }).ToList();
+            return dsThi;
+        }
+
         public int SoLuongThiSinhTheoKhoa(int khoaThiId)
         {
             int sl = context.DanhSachPhongThis.Where(t => t.PhongThi.ID_KhoaThi == khoaThiId).Count();
@@ -67,5 +101,29 @@ namespace TrungTamNgoaiNgu.DAL
             }
         }
 
+        public bool CapNhatDanhSachThi(DanhSachPhongThi ds)
+        {
+            var dsUpdate = context.DanhSachPhongThis.FirstOrDefault(t => t.Id == ds.Id);
+
+            if (dsUpdate != null)
+            {
+                dsUpdate.DiemDoc = ds.DiemDoc;
+                dsUpdate.DiemViet = ds.DiemViet;
+                dsUpdate.DiemNghe = ds.DiemNghe;
+                dsUpdate.DiemNoi = ds.DiemNoi;
+                dsUpdate.Id_PhongThi = ds.Id_PhongThi;
+                dsUpdate.Id_ThiSinh = ds.Id_ThiSinh;
+                dsUpdate.SBD = ds.SBD;
+            }
+            try
+            { 
+                context.SubmitChanges();
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+        }
     }
 }
