@@ -10,7 +10,8 @@ namespace TrungTamNgoaiNgu.GUI
     {
         Bus_KhoaThi busKhoaThi = new Bus_KhoaThi();
         List<Dto_KhoaThi> dsKhoaThi = new List<Dto_KhoaThi>();
-        List<ThiSinh> dsThiSinh = new List<ThiSinh>();
+        Bus_PhieuDangKy busPhieuDk = new Bus_PhieuDangKy();
+        List <Dto_PhieuDangKy> dsPhieuDk = new List<Dto_PhieuDangKy> ();
         string tenTs;
         int id_Ts;
 
@@ -48,17 +49,32 @@ namespace TrungTamNgoaiNgu.GUI
         {
             Bus_PhieuDangKy bus = new Bus_PhieuDangKy();
             Dto_PhieuDangKy pDkMoi = new Dto_PhieuDangKy();
+            int tempId = dsKhoaThi[cbxKhoaThi.SelectedIndex].Id;
             pDkMoi.Id_ThiSinh = id_Ts;
-            pDkMoi.Id_KhoaThi = dsKhoaThi[cbxKhoaThi.SelectedIndex].Id;
+            pDkMoi.Id_KhoaThi = tempId;
             pDkMoi.TrinhDo = cbxTrinhDo.SelectedItem.ToString();
             pDkMoi.NgayDangKy = txtNgaydDk.Value;
-            if (bus.DKDuThi(pDkMoi))
+            if (KtTonTaiDKThi(id_Ts, tempId))
             {
-                MessageBox.Show("Đã đăng ký thành công", "Thành công", MessageBoxButtons.OK);
+                if (bus.DKDuThi(pDkMoi))
+                {
+                    MessageBox.Show("Đã đăng ký thành công", "Thành công", MessageBoxButtons.OK);
+                }
+                else
+                    MessageBox.Show("Đã có lỗi xảy ra", "Thất bại", MessageBoxButtons.OK);
+                Close();
             }
-            else
-                MessageBox.Show("Đã có lỗi xảy ra", "Thất bại", MessageBoxButtons.OK);
-            Close();
+            else MessageBox.Show("Thí sinh đã đăng ký dự thi, vui lòng chọn lại", "Thất bại", MessageBoxButtons.OK);
+        }
+
+        public bool KtTonTaiDKThi (int idTS, int idKT)
+        {
+            dsPhieuDk = busPhieuDk.LayDanhSachPhieuDk();
+            foreach (var item in dsPhieuDk)
+            {
+                if ((item.Id_ThiSinh == idTS) && (item.Id_KhoaThi == idKT)) return false;
+            }
+            return true;
         }
 
     }

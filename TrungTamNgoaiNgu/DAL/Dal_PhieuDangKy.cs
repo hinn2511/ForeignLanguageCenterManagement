@@ -21,6 +21,18 @@ namespace TrungTamNgoaiNgu.DAL
             return dsDangKy;
         }
 
+        public List<Dto_PhieuDangKy> LayDanhSachDangKy()
+        {
+            var dsDangKy = context.PhieuDangKies.Select(dk => new Dto_PhieuDangKy
+            {
+                Id_KhoaThi = dk.Id_KhoaThi,
+                TrinhDo = dk.TrinhDo,
+                Id_ThiSinh = dk.Id_ThiSinh,
+                NgayDangKy = dk.NgayDangKy
+            }).ToList();
+            return dsDangKy;
+        }
+
         public int LaySoLuongDangKy(int khoaThiId, string trinhDo)
         {
             var sl = context.PhieuDangKies.Where(dk => dk.Id_KhoaThi == khoaThiId && dk.TrinhDo == trinhDo).Count();

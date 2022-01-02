@@ -10,12 +10,15 @@ namespace TrungTamNgoaiNgu.BUS
 {
     public class Bus_PhieuDangKy
     {
+        Dal_PhieuDangKy dal = new Dal_PhieuDangKy();
         public bool DKDuThi (Dto_PhieuDangKy pdk)
         {
-            Dal_PhieuDangKy dal = new Dal_PhieuDangKy();
+            
             if (dal.ThemTSDangKyThi(convertToEntity(pdk))) return true;
             return false;
         }
+
+
          public PhieuDangKy convertToEntity(Dto_PhieuDangKy dto)
         {
             PhieuDangKy pt = new PhieuDangKy();
@@ -25,6 +28,11 @@ namespace TrungTamNgoaiNgu.BUS
             pt.NgayDangKy = dto.NgayDangKy;
             return pt;
         }
+
+        public List<Dto_PhieuDangKy> LayDanhSachPhieuDk()
+        {
+            return dal.LayDanhSachDangKy();
+        } 
 
     }
 }
