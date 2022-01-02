@@ -26,5 +26,16 @@ namespace TrungTamNgoaiNgu.DAL
             var sl = context.PhieuDangKies.Where(dk => dk.Id_KhoaThi == khoaThiId && dk.TrinhDo == trinhDo).Count();
             return sl;
         }
+
+        public bool ThemTSDangKyThi (PhieuDangKy phieuDangKy)
+        {
+            context.PhieuDangKies.InsertOnSubmit(phieuDangKy);
+            try
+            {
+                context.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
     }
 }

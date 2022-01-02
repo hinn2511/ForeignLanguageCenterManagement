@@ -39,10 +39,10 @@
             this.btnLamMoi = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btn_DkThi = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -98,6 +98,7 @@
             this.dataGridViewTS.RowTemplate.Height = 24;
             this.dataGridViewTS.Size = new System.Drawing.Size(1237, 592);
             this.dataGridViewTS.TabIndex = 0;
+            this.dataGridViewTS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTS_CellClick);
             this.dataGridViewTS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTS_CellContentClick);
             // 
             // panel6
@@ -184,7 +185,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.iconButton1);
-            this.panel2.Controls.Add(this.iconButton3);
+            this.panel2.Controls.Add(this.btn_DkThi);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -193,26 +194,48 @@
             this.panel2.Size = new System.Drawing.Size(1237, 50);
             this.panel2.TabIndex = 0;
             // 
-            // iconButton3
+            // iconButton1
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iconButton3.ForeColor = System.Drawing.Color.Black;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Wpforms;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 24;
-            this.iconButton3.Location = new System.Drawing.Point(818, 0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(159, 50);
-            this.iconButton3.TabIndex = 13;
-            this.iconButton3.Text = "ĐĂNG KÝ THI";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.iconButton1.ForeColor = System.Drawing.Color.Black;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 24;
+            this.iconButton1.Location = new System.Drawing.Point(659, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(159, 50);
+            this.iconButton1.TabIndex = 14;
+            this.iconButton1.Text = "CHI TIẾT";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // btn_DkThi
+            // 
+            this.btn_DkThi.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DkThi.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_DkThi.FlatAppearance.BorderSize = 0;
+            this.btn_DkThi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DkThi.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_DkThi.ForeColor = System.Drawing.Color.Black;
+            this.btn_DkThi.IconChar = FontAwesome.Sharp.IconChar.Wpforms;
+            this.btn_DkThi.IconColor = System.Drawing.Color.Black;
+            this.btn_DkThi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_DkThi.IconSize = 24;
+            this.btn_DkThi.Location = new System.Drawing.Point(818, 0);
+            this.btn_DkThi.Name = "btn_DkThi";
+            this.btn_DkThi.Size = new System.Drawing.Size(159, 50);
+            this.btn_DkThi.TabIndex = 13;
+            this.btn_DkThi.Text = "ĐĂNG KÝ THI";
+            this.btn_DkThi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_DkThi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_DkThi.UseVisualStyleBackColor = false;
+            this.btn_DkThi.Click += new System.EventHandler(this.btn_DkThi_Click);
             // 
             // btnThem
             // 
@@ -258,27 +281,6 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 24;
-            this.iconButton1.Location = new System.Drawing.Point(659, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(159, 50);
-            this.iconButton1.TabIndex = 14;
-            this.iconButton1.Text = "CHI TIẾT";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // GUITS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -314,7 +316,7 @@
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnXoa;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btn_DkThi;
         private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Bus_DSPhongThi.cs" />
+    <Compile Include="BUS\Bus_PhieuDangKy.cs" />
     <Compile Include="BUS\Bus_PhongThi.cs" />
     <Compile Include="BUS\Bus_KhoaThi.cs" />
     <Compile Include="BUS\Bus_ThiSinh.cs" />
@@ -114,6 +115,12 @@
     <Compile Include="GUI\GiaoDienPhongThi\Gui_ThemPhongThi.designer.cs">
       <DependentUpon>Gui_ThemPhongThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PhieuDangKy\Gui_DKThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuDangKy\Gui_DKThi.designer.cs">
+      <DependentUpon>Gui_DKThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiaoDienThiSinh\Gui_ThemTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoDienPhongThi\Gui_ThemPhongThi.resx">
       <DependentUpon>Gui_ThemPhongThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuDangKy\Gui_DKThi.resx">
+      <DependentUpon>Gui_DKThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoDienThiSinh\Gui_ThemTS.resx">
       <DependentUpon>Gui_ThemTS.cs</DependentUpon>

@@ -10,6 +10,8 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienThiSinh
     {
         private List<Dto_ThiSinh> dsTS = new List<Dto_ThiSinh>();
         int currentIndex;
+        int id;
+        string name;
         public GUITS()
         {
             InitializeComponent();
@@ -68,14 +70,28 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienThiSinh
             CapNhatDanhSachTS();
         }
 
+        private void btn_DkThi_Click(object sender, EventArgs e)
+        {
+            Gui_DKThi dkThi = new Gui_DKThi(name, id);
+            dkThi.ShowDialog();
+        }
+
         private void dataGridViewTS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridViewTS_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
 
             if (dataGridViewTS.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 currentIndex = e.RowIndex;
+                id = (int) dataGridViewTS.Rows[e.RowIndex].Cells[0].Value;
+                name = (string)dataGridViewTS.Rows[e.RowIndex].Cells[1].Value;
             }
+           
         }
     }
 }
