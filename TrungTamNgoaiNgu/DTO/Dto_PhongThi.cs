@@ -13,5 +13,6 @@ namespace TrungTamNgoaiNgu.DTO
         public string TenPhongThi { get; set; }
         public string TrinhDo { get; set; }
         public string CaThi { get; set; }
+        public int SoLuongThiSinh { get; set; }
     }
 }

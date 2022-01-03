@@ -33,6 +33,12 @@ namespace TrungTamNgoaiNgu.DAL
             return dsDangKy;
         }
 
+        public int LaySoLuongDangKy(int khoaThiId)
+        {
+            var sl = context.PhieuDangKies.Where(dk => dk.Id_KhoaThi == khoaThiId).Count();
+            return sl;
+        }
+
         public int LaySoLuongDangKy(int khoaThiId, string trinhDo)
         {
             var sl = context.PhieuDangKies.Where(dk => dk.Id_KhoaThi == khoaThiId && dk.TrinhDo == trinhDo).Count();

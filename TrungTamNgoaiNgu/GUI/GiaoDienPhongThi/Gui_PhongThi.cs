@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
 using TrungTamNgoaiNgu.DTO;
@@ -45,6 +46,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
             phongThiGridView.Columns["TenPhongThi"].HeaderText = "Tên phòng thi";
             phongThiGridView.Columns["TrinhDo"].HeaderText = "Trình độ";
             phongThiGridView.Columns["CaThi"].HeaderText = "Ca thi";
+            phongThiGridView.Columns["SoLuongThiSinh"].HeaderText = "Số lượng thí sinh";
             phongThiGridView.Columns["ID_KhoaThi"].Visible = false;
         }
 

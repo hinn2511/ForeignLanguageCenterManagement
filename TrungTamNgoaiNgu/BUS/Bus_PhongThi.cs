@@ -26,7 +26,7 @@ namespace TrungTamNgoaiNgu.BUS
 
         public int SoLuongThiSinhDangKy(int khoaThiId)
         {
-            return dal_dsphongthi.SoLuongThiSinhTheoKhoa(khoaThiId);
+            return dal_phieudk.LaySoLuongDangKy(khoaThiId);
         }
 
         public bool CoTheTaoDanhSachThi(int khoaThiId)

@@ -19,6 +19,7 @@ namespace TrungTamNgoaiNgu.DAL
                 CaThi = pt.CaThi,
                 TrinhDo = pt.TrinhDo,
                 ID_KhoaThi = pt.ID_KhoaThi,
+                SoLuongThiSinh = context.DanhSachPhongThis.Where(x => x.Id_PhongThi == pt.Id).Count(),
             }).ToList();
             return dsPhongThi;
         }

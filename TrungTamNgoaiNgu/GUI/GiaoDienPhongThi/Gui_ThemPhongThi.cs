@@ -55,9 +55,12 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
 
         private void cbxTrinhDo_DropDownClosed(object sender, EventArgs e)
         {
-            PhongThiMoi.TrinhDo = cbxTrinhDo.SelectedItem.ToString();
-            tenPhongThi = bus.TaoTenPhongThi(khoaThi.Id, PhongThiMoi.TrinhDo);
-            txtTenPhongThi.Text = tenPhongThi;
+            if(cbxTrinhDo.SelectedIndex > -1)
+            {
+                PhongThiMoi.TrinhDo = cbxTrinhDo.SelectedItem.ToString();
+                tenPhongThi = bus.TaoTenPhongThi(khoaThi.Id, PhongThiMoi.TrinhDo);
+                txtTenPhongThi.Text = tenPhongThi;
+            }
         }
     }
 }
