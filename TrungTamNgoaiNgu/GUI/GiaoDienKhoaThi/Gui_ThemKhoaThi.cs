@@ -29,6 +29,9 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
                 case "nullerror":
                     ShowMessage("Vui lòng điền đầy đủ thông tin", "Lỗi");
                     break;
+                case "duplicateerror":
+                    ShowMessage("Đã tồn tại khóa thi tại thời điểm này. Vui lòng chọn thờ điểm khác.", "Lỗi");
+                    break;
                 case "dateerror":
                     ShowMessage("Ngày thi không hợp lệ", "Lỗi");
                     break;

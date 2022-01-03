@@ -30,6 +30,8 @@ namespace TrungTamNgoaiNgu.BUS
         public string ThemKhoaThi(Dto_KhoaThi dto)
         {
             DateTime now = DateTime.Now;
+            if (dal.DaTaoKhoaThi(dto.NgayThi))
+                return "duplicateerror";
             if(dto.NgayThi < now)
                 return "dateerror";
             if (string.IsNullOrEmpty(dto.TenKhoaThi))

@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnDsTheoKhoa = new FontAwesome.Sharp.IconButton();
+            this.btnTraCuu = new FontAwesome.Sharp.IconButton();
             this.btnNhapDiem = new FontAwesome.Sharp.IconButton();
+            this.btnDsTheoKhoa = new FontAwesome.Sharp.IconButton();
             this.btnThiSinh = new FontAwesome.Sharp.IconButton();
             this.btnPhongThi = new FontAwesome.Sharp.IconButton();
             this.btnThoat = new FontAwesome.Sharp.IconButton();
@@ -47,8 +48,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelMenu.Controls.Add(this.btnDsTheoKhoa);
+            this.panelMenu.Controls.Add(this.btnTraCuu);
             this.panelMenu.Controls.Add(this.btnNhapDiem);
+            this.panelMenu.Controls.Add(this.btnDsTheoKhoa);
             this.panelMenu.Controls.Add(this.btnThiSinh);
             this.panelMenu.Controls.Add(this.btnPhongThi);
             this.panelMenu.Controls.Add(this.btnThoat);
@@ -59,27 +61,27 @@
             this.panelMenu.Size = new System.Drawing.Size(237, 800);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnDsTheoKhoa
+            // btnTraCuu
             // 
-            this.btnDsTheoKhoa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDsTheoKhoa.FlatAppearance.BorderSize = 0;
-            this.btnDsTheoKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDsTheoKhoa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDsTheoKhoa.ForeColor = System.Drawing.Color.Black;
-            this.btnDsTheoKhoa.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnDsTheoKhoa.IconColor = System.Drawing.Color.Black;
-            this.btnDsTheoKhoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDsTheoKhoa.IconSize = 1;
-            this.btnDsTheoKhoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDsTheoKhoa.Location = new System.Drawing.Point(0, 280);
-            this.btnDsTheoKhoa.Name = "btnDsTheoKhoa";
-            this.btnDsTheoKhoa.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDsTheoKhoa.Size = new System.Drawing.Size(237, 70);
-            this.btnDsTheoKhoa.TabIndex = 12;
-            this.btnDsTheoKhoa.Text = "DANH SÁCH ĐĂNG KÝ THI";
-            this.btnDsTheoKhoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDsTheoKhoa.UseVisualStyleBackColor = true;
-            this.btnDsTheoKhoa.Click += new System.EventHandler(this.btnDsTheoKhoa_Click);
+            this.btnTraCuu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTraCuu.FlatAppearance.BorderSize = 0;
+            this.btnTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraCuu.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTraCuu.ForeColor = System.Drawing.Color.Black;
+            this.btnTraCuu.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnTraCuu.IconColor = System.Drawing.Color.Black;
+            this.btnTraCuu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTraCuu.IconSize = 1;
+            this.btnTraCuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTraCuu.Location = new System.Drawing.Point(0, 350);
+            this.btnTraCuu.Name = "btnTraCuu";
+            this.btnTraCuu.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTraCuu.Size = new System.Drawing.Size(237, 70);
+            this.btnTraCuu.TabIndex = 14;
+            this.btnTraCuu.Text = "TRA CỨU KẾT QUẢ";
+            this.btnTraCuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTraCuu.UseVisualStyleBackColor = true;
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
             // btnNhapDiem
             // 
@@ -93,15 +95,38 @@
             this.btnNhapDiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNhapDiem.IconSize = 1;
             this.btnNhapDiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhapDiem.Location = new System.Drawing.Point(0, 210);
+            this.btnNhapDiem.Location = new System.Drawing.Point(0, 280);
             this.btnNhapDiem.Name = "btnNhapDiem";
             this.btnNhapDiem.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnNhapDiem.Size = new System.Drawing.Size(237, 70);
-            this.btnNhapDiem.TabIndex = 11;
+            this.btnNhapDiem.TabIndex = 13;
             this.btnNhapDiem.Text = "NHẬP ĐIỂM";
             this.btnNhapDiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNhapDiem.UseVisualStyleBackColor = true;
             this.btnNhapDiem.Click += new System.EventHandler(this.btnNhapDiem_Click);
+            // 
+            // btnDsTheoKhoa
+            // 
+            this.btnDsTheoKhoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDsTheoKhoa.FlatAppearance.BorderSize = 0;
+            this.btnDsTheoKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDsTheoKhoa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDsTheoKhoa.ForeColor = System.Drawing.Color.Black;
+            this.btnDsTheoKhoa.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnDsTheoKhoa.IconColor = System.Drawing.Color.Black;
+            this.btnDsTheoKhoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDsTheoKhoa.IconSize = 1;
+            this.btnDsTheoKhoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDsTheoKhoa.Location = new System.Drawing.Point(0, 210);
+            this.btnDsTheoKhoa.Name = "btnDsTheoKhoa";
+            this.btnDsTheoKhoa.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDsTheoKhoa.Size = new System.Drawing.Size(237, 70);
+            this.btnDsTheoKhoa.TabIndex = 12;
+            this.btnDsTheoKhoa.Text = "DANH SÁCH ĐĂNG KÝ DỰ THI";
+            this.btnDsTheoKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDsTheoKhoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDsTheoKhoa.UseVisualStyleBackColor = true;
+            this.btnDsTheoKhoa.Click += new System.EventHandler(this.btnDsTheoKhoa_Click);
             // 
             // btnThiSinh
             // 
@@ -259,9 +284,10 @@
         private System.Windows.Forms.Panel panelForm;
         private FontAwesome.Sharp.IconButton btnThoat;
         private System.Windows.Forms.Label lblTitleChildForm;
-        private FontAwesome.Sharp.IconButton btnNhapDiem;
         private FontAwesome.Sharp.IconButton btnThiSinh;
         private FontAwesome.Sharp.IconButton btnPhongThi;
         private FontAwesome.Sharp.IconButton btnDsTheoKhoa;
+        private FontAwesome.Sharp.IconButton btnNhapDiem;
+        private FontAwesome.Sharp.IconButton btnTraCuu;
     }
 }

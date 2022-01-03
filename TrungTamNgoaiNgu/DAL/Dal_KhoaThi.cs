@@ -27,10 +27,9 @@ namespace TrungTamNgoaiNgu.DAL
             return khoaThi;
         }
 
-        public KhoaThi KhoaThiTaiThoiDiem(DateTime thoigian)
+        public bool DaTaoKhoaThi(DateTime thoigian)
         {
-            var khoaThi = context.KhoaThis.FirstOrDefault(kt => kt.NgayThi.Month == thoigian.Month && kt.NgayThi.Year == thoigian.Year);
-            return khoaThi;
+            return context.KhoaThis.Where(kt => kt.NgayThi.Month == thoigian.Month && kt.NgayThi.Year == thoigian.Year).Any();
         }
 
 

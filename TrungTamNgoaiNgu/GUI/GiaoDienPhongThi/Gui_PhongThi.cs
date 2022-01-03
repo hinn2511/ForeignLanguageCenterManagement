@@ -76,6 +76,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
                 ShowMessage("Vui lòng chọn phòng thi cần xóa", "Lỗi");
                 return;
             }
+            if (dsPhongThi == null)
+            {
+                return;
+            }
             switch (bus.XoaPhongThi(dsPhongThi[currentIndex]))
             {
                 case "timeerror":
@@ -143,6 +147,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         {
             if (!ChonKhoaThi())
                 return;
+            if (dsPhongThi == null)
+            {
+                return;
+            }
             if (currentIndex < 0)
             {
                 ShowMessage("Vui lòng chọn phòng thi cần xem danh sách", "Lỗi");
@@ -156,6 +164,11 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         {
             if (!ChonKhoaThi())
                 return;
+            if (bus.SoLuongThiSinhDangKy(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id) == 0)
+            {
+                ShowMessage("Khóa thi chưa có thí sinh đăng ký.", "Lỗi");
+                return;
+            }
             if (bus.DaTaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id))
             {
                 ShowMessage("Khóa thi này đã tạo danh sách thi.", "Lỗi");

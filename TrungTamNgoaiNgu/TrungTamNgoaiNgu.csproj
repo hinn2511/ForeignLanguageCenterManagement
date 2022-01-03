@@ -71,6 +71,7 @@
     <Compile Include="DAL\Dal_KhoaThi.cs" />
     <Compile Include="DAL\Dal_ThiSinh.cs" />
     <Compile Include="DTO\Dto_DSDangKyThi.cs" />
+    <Compile Include="DTO\Dto_DSKetQuaThi.cs" />
     <Compile Include="DTO\Dto_DSPhongThi.cs" />
     <Compile Include="DTO\Dto_KhoaThi.cs" />
     <Compile Include="DTO\Dto_PhieuDangKy.cs" />
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="GUI\GiaoDienDSDangKyThi\DsDangKyThi.Designer.cs">
       <DependentUpon>DsDangKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoDienDSDangKyThi\Gui_DSDangKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoDienDSDangKyThi\Gui_DSDangKyThi.designer.cs">
+      <DependentUpon>Gui_DSDangKyThi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GiaoDienDSThiSinh\Gui_DSThiSinh.cs">
       <SubType>Form</SubType>
@@ -167,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoDienDSDangKyThi\DsDangKyThi.resx">
       <DependentUpon>DsDangKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoDienDSDangKyThi\Gui_DSDangKyThi.resx">
+      <DependentUpon>Gui_DSDangKyThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoDienDSThiSinh\Gui_DSThiSinh.resx">
       <DependentUpon>Gui_DSThiSinh.cs</DependentUpon>

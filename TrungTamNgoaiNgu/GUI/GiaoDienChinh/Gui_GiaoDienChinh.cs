@@ -113,12 +113,12 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
             lblTitleChildForm.Text = "PHÒNG THI";
         }
 
-        //private void btnTraCuu_Click(object sender, EventArgs e)
+        private void btnTraCuu_Click(object sender, EventArgs e)
         {
-            //ActivateButton(sender);
-            //OpenChildForm(new Gui_DSKetQua());
-            //lblTitleChildForm.Text = "TRA CỨU KẾT QUẢ";
-        //}
+            ActivateButton(sender);
+            OpenChildForm(new Gui_DSKetQua());
+            lblTitleChildForm.Text = "TRA CỨU KẾT QUẢ";
+        }
 
 
 
@@ -138,8 +138,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
         private void btnDsTheoKhoa_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new DsDangKyThi());
+            OpenChildForm(new Gui_DSDangKyThi());
             lblTitleChildForm.Text = "Danh sách đăng ký thi";
         }
+
+        
     }
 }
