@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnDsTheoKhoa = new FontAwesome.Sharp.IconButton();
             this.btnNhapDiem = new FontAwesome.Sharp.IconButton();
             this.btnThiSinh = new FontAwesome.Sharp.IconButton();
             this.btnPhongThi = new FontAwesome.Sharp.IconButton();
@@ -46,6 +47,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelMenu.Controls.Add(this.btnDsTheoKhoa);
             this.panelMenu.Controls.Add(this.btnNhapDiem);
             this.panelMenu.Controls.Add(this.btnThiSinh);
             this.panelMenu.Controls.Add(this.btnPhongThi);
@@ -56,6 +58,28 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(237, 800);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnDsTheoKhoa
+            // 
+            this.btnDsTheoKhoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDsTheoKhoa.FlatAppearance.BorderSize = 0;
+            this.btnDsTheoKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDsTheoKhoa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDsTheoKhoa.ForeColor = System.Drawing.Color.Black;
+            this.btnDsTheoKhoa.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnDsTheoKhoa.IconColor = System.Drawing.Color.Black;
+            this.btnDsTheoKhoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDsTheoKhoa.IconSize = 1;
+            this.btnDsTheoKhoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDsTheoKhoa.Location = new System.Drawing.Point(0, 280);
+            this.btnDsTheoKhoa.Name = "btnDsTheoKhoa";
+            this.btnDsTheoKhoa.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDsTheoKhoa.Size = new System.Drawing.Size(237, 70);
+            this.btnDsTheoKhoa.TabIndex = 12;
+            this.btnDsTheoKhoa.Text = "DANH SÁCH ĐĂNG KÝ THI";
+            this.btnDsTheoKhoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDsTheoKhoa.UseVisualStyleBackColor = true;
+            this.btnDsTheoKhoa.Click += new System.EventHandler(this.btnDsTheoKhoa_Click);
             // 
             // btnNhapDiem
             // 
@@ -238,5 +262,6 @@
         private FontAwesome.Sharp.IconButton btnNhapDiem;
         private FontAwesome.Sharp.IconButton btnThiSinh;
         private FontAwesome.Sharp.IconButton btnPhongThi;
+        private FontAwesome.Sharp.IconButton btnDsTheoKhoa;
     }
 }

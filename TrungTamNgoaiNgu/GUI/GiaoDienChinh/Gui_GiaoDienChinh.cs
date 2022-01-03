@@ -7,6 +7,7 @@ using TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi;
 using TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem;
 using TrungTamNgoaiNgu.GUI.GiaoDienPhongThi;
 using TrungTamNgoaiNgu.GUI.GiaoDienThiSinh;
+using TrungTamNgoaiNgu.GUI.GiaoDienDSDangKyThi;
 
 namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
 {
@@ -127,5 +128,18 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
             
         }
 
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            //OpenChildForm(new Gui_ThongKe());
+            lblTitleChildForm.Text = "THỐNG KÊ";
+        }
+
+        private void btnDsTheoKhoa_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new DsDangKyThi());
+            lblTitleChildForm.Text = "Danh sách đăng ký thi";
+        }
     }
 }
