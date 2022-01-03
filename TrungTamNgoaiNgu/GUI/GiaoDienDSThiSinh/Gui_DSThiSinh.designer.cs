@@ -36,8 +36,8 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
             this.dsptGridView = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblTenPhongThi = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -109,6 +109,17 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
             this.panel2.Size = new System.Drawing.Size(1237, 50);
             this.panel2.TabIndex = 0;
             // 
+            // lblTenPhongThi
+            // 
+            this.lblTenPhongThi.AutoSize = true;
+            this.lblTenPhongThi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenPhongThi.ForeColor = System.Drawing.Color.Black;
+            this.lblTenPhongThi.Location = new System.Drawing.Point(229, 12);
+            this.lblTenPhongThi.Name = "lblTenPhongThi";
+            this.lblTenPhongThi.Size = new System.Drawing.Size(115, 24);
+            this.lblTenPhongThi.TabIndex = 4;
+            this.lblTenPhongThi.Text = "PHONGTHI";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -119,17 +130,6 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
             this.label4.Size = new System.Drawing.Size(209, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "DANH SÁCH PHÒNG THI ";
-            // 
-            // lblTenPhongThi
-            // 
-            this.lblTenPhongThi.AutoSize = true;
-            this.lblTenPhongThi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTenPhongThi.ForeColor = System.Drawing.Color.Black;
-            this.lblTenPhongThi.Location = new System.Drawing.Point(229, 15);
-            this.lblTenPhongThi.Name = "lblTenPhongThi";
-            this.lblTenPhongThi.Size = new System.Drawing.Size(97, 20);
-            this.lblTenPhongThi.TabIndex = 4;
-            this.lblTenPhongThi.Text = "PHONGTHI";
             // 
             // Gui_DSThiSinh
             // 

@@ -39,7 +39,6 @@
             this.btnLamMoi = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btn_DkThi = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
@@ -141,10 +140,10 @@
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTimKiem.IconColor = System.Drawing.Color.Black;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiem.IconSize = 24;
+            this.btnTimKiem.IconSize = 1;
             this.btnTimKiem.Location = new System.Drawing.Point(884, 0);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(191, 48);
@@ -162,10 +161,10 @@
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
-            this.btnLamMoi.IconChar = FontAwesome.Sharp.IconChar.Redo;
+            this.btnLamMoi.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLamMoi.IconColor = System.Drawing.Color.Black;
             this.btnLamMoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLamMoi.IconSize = 24;
+            this.btnLamMoi.IconSize = 1;
             this.btnLamMoi.Location = new System.Drawing.Point(1075, 0);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(162, 48);
@@ -186,7 +185,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.btn_DkThi);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnXoa);
@@ -196,27 +194,6 @@
             this.panel2.Size = new System.Drawing.Size(1237, 50);
             this.panel2.TabIndex = 0;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 24;
-            this.iconButton1.Location = new System.Drawing.Point(659, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(159, 50);
-            this.iconButton1.TabIndex = 14;
-            this.iconButton1.Text = "CHI TIẾT";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // btn_DkThi
             // 
             this.btn_DkThi.BackColor = System.Drawing.Color.Transparent;
@@ -225,15 +202,15 @@
             this.btn_DkThi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DkThi.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_DkThi.ForeColor = System.Drawing.Color.Black;
-            this.btn_DkThi.IconChar = FontAwesome.Sharp.IconChar.Wpforms;
+            this.btn_DkThi.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_DkThi.IconColor = System.Drawing.Color.Black;
             this.btn_DkThi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_DkThi.IconSize = 24;
-            this.btn_DkThi.Location = new System.Drawing.Point(818, 0);
+            this.btn_DkThi.IconSize = 1;
+            this.btn_DkThi.Location = new System.Drawing.Point(710, 0);
             this.btn_DkThi.Name = "btn_DkThi";
-            this.btn_DkThi.Size = new System.Drawing.Size(159, 50);
+            this.btn_DkThi.Size = new System.Drawing.Size(201, 50);
             this.btn_DkThi.TabIndex = 13;
-            this.btn_DkThi.Text = "ĐĂNG KÝ THI";
+            this.btn_DkThi.Text = "ĐĂNG KÝ DỰ THI";
             this.btn_DkThi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DkThi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DkThi.UseVisualStyleBackColor = false;
@@ -247,15 +224,15 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnThem.IconColor = System.Drawing.Color.Black;
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThem.IconSize = 24;
-            this.btnThem.Location = new System.Drawing.Point(977, 0);
+            this.btnThem.IconSize = 1;
+            this.btnThem.Location = new System.Drawing.Point(911, 0);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(130, 50);
+            this.btnThem.Size = new System.Drawing.Size(180, 50);
             this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "THÊM";
+            this.btnThem.Text = "THÊM THÍ SINH";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
@@ -269,15 +246,15 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnXoa.IconColor = System.Drawing.Color.Black;
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoa.IconSize = 24;
-            this.btnXoa.Location = new System.Drawing.Point(1107, 0);
+            this.btnXoa.IconSize = 1;
+            this.btnXoa.Location = new System.Drawing.Point(1091, 0);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(130, 50);
+            this.btnXoa.Size = new System.Drawing.Size(146, 50);
             this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "XÓA";
+            this.btnXoa.Text = "XÓA THÍ SINH";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -319,6 +296,5 @@
         private FontAwesome.Sharp.IconButton btnXoa;
         private System.Windows.Forms.TextBox txtTimKiem;
         private FontAwesome.Sharp.IconButton btn_DkThi;
-        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

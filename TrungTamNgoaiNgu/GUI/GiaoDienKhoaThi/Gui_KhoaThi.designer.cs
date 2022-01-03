@@ -140,16 +140,16 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiem.BackColor = System.Drawing.Color.LightGray;
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTimKiem.FlatAppearance.BorderSize = 0;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTimKiem.IconColor = System.Drawing.Color.Black;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiem.IconSize = 24;
+            this.btnTimKiem.IconSize = 1;
             this.btnTimKiem.Location = new System.Drawing.Point(881, 0);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
@@ -169,10 +169,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
-            this.btnLamMoi.IconChar = FontAwesome.Sharp.IconChar.Redo;
+            this.btnLamMoi.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLamMoi.IconColor = System.Drawing.Color.Black;
             this.btnLamMoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLamMoi.IconSize = 24;
+            this.btnLamMoi.IconSize = 1;
             this.btnLamMoi.Location = new System.Drawing.Point(1072, 0);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
@@ -212,14 +212,14 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnThem.IconColor = System.Drawing.Color.Black;
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThem.IconSize = 24;
-            this.btnThem.Location = new System.Drawing.Point(850, 0);
+            this.btnThem.IconSize = 1;
+            this.btnThem.Location = new System.Drawing.Point(908, 0);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(195, 50);
+            this.btnThem.Size = new System.Drawing.Size(164, 50);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "THÊM KHÓA THI";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,14 +235,14 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnXoa.IconColor = System.Drawing.Color.Black;
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoa.IconSize = 24;
-            this.btnXoa.Location = new System.Drawing.Point(1045, 0);
+            this.btnXoa.IconSize = 1;
+            this.btnXoa.Location = new System.Drawing.Point(1072, 0);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(190, 50);
+            this.btnXoa.Size = new System.Drawing.Size(163, 50);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "XÓA KHÓA THI";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -256,7 +256,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 754);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Gui_KhoaThi";
             this.Text = "Gui_GiaTour";
             this.panel1.ResumeLayout(false);

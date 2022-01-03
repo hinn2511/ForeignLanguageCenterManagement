@@ -38,7 +38,7 @@ namespace TrungTamNgoaiNgu.BUS
             return dsThi;
         }
 
-        public List<Dto_DSPhongThi> LayKetQua(string type, string key)
+        public List<Dto_DSKetQuaThi> LayKetQua(string type, string key)
         {
             switch (type)
             {
@@ -51,7 +51,7 @@ namespace TrungTamNgoaiNgu.BUS
             }
         }
 
-        public List<Dto_DSPhongThi> TimKiemThiSinh(string type, string key)
+        public List<Dto_DSKetQuaThi> TimKiemThiSinh(string type, string key)
         {
             switch (type)
             {

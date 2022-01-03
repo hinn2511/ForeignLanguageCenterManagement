@@ -32,7 +32,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbxTrinhDo = new System.Windows.Forms.ComboBox();
             this.cbxKhoaThi = new System.Windows.Forms.ComboBox();
-            this.txtNgaydDk = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtNgayDangKy = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,15 +55,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(965, 492);
+            this.panel1.Size = new System.Drawing.Size(806, 427);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.txtNgayDangKy);
             this.panel3.Controls.Add(this.cbxTrinhDo);
             this.panel3.Controls.Add(this.cbxKhoaThi);
-            this.panel3.Controls.Add(this.txtNgaydDk);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.btnHuy);
             this.panel3.Controls.Add(this.btnThem);
@@ -74,7 +74,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(965, 437);
+            this.panel3.Size = new System.Drawing.Size(806, 372);
             this.panel3.TabIndex = 1;
             // 
             // cbxTrinhDo
@@ -82,11 +82,11 @@
             this.cbxTrinhDo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTrinhDo.FormattingEnabled = true;
             this.cbxTrinhDo.Items.AddRange(new object[] {
-            "A1",
+            "A2",
             "B1"});
             this.cbxTrinhDo.Location = new System.Drawing.Point(264, 163);
             this.cbxTrinhDo.Name = "cbxTrinhDo";
-            this.cbxTrinhDo.Size = new System.Drawing.Size(199, 31);
+            this.cbxTrinhDo.Size = new System.Drawing.Size(503, 31);
             this.cbxTrinhDo.TabIndex = 28;
             // 
             // cbxKhoaThi
@@ -95,19 +95,8 @@
             this.cbxKhoaThi.FormattingEnabled = true;
             this.cbxKhoaThi.Location = new System.Drawing.Point(264, 100);
             this.cbxKhoaThi.Name = "cbxKhoaThi";
-            this.cbxKhoaThi.Size = new System.Drawing.Size(199, 31);
+            this.cbxKhoaThi.Size = new System.Drawing.Size(503, 31);
             this.cbxKhoaThi.TabIndex = 28;
-            // 
-            // txtNgaydDk
-            // 
-            this.txtNgaydDk.CustomFormat = "dd/MM/yyyy";
-            this.txtNgaydDk.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaydDk.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtNgaydDk.Location = new System.Drawing.Point(264, 221);
-            this.txtNgaydDk.Name = "txtNgaydDk";
-            this.txtNgaydDk.Size = new System.Drawing.Size(164, 30);
-            this.txtNgaydDk.TabIndex = 26;
-            this.txtNgaydDk.Value = new System.DateTime(2022, 1, 3, 11, 5, 16, 0);
             // 
             // label10
             // 
@@ -127,7 +116,7 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(738, 301);
+            this.btnHuy.Location = new System.Drawing.Point(562, 293);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(205, 48);
             this.btnHuy.TabIndex = 12;
@@ -137,12 +126,12 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Silver;
+            this.btnThem.BackColor = System.Drawing.Color.Gray;
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.Location = new System.Drawing.Point(486, 301);
+            this.btnThem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThem.Location = new System.Drawing.Point(330, 293);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(205, 48);
             this.btnThem.TabIndex = 11;
@@ -168,7 +157,7 @@
             this.txtHoTen.Multiline = true;
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.ReadOnly = true;
-            this.txtHoTen.Size = new System.Drawing.Size(679, 31);
+            this.txtHoTen.Size = new System.Drawing.Size(503, 31);
             this.txtHoTen.TabIndex = 3;
             // 
             // label5
@@ -195,12 +184,12 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackColor = System.Drawing.Color.Gray;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(965, 55);
+            this.panel2.Size = new System.Drawing.Size(806, 55);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -215,11 +204,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG KÝ DỰ THI";
             // 
+            // txtNgayDangKy
+            // 
+            this.txtNgayDangKy.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayDangKy.Location = new System.Drawing.Point(264, 224);
+            this.txtNgayDangKy.Multiline = true;
+            this.txtNgayDangKy.Name = "txtNgayDangKy";
+            this.txtNgayDangKy.ReadOnly = true;
+            this.txtNgayDangKy.Size = new System.Drawing.Size(503, 31);
+            this.txtNgayDangKy.TabIndex = 29;
+            // 
             // Gui_DKThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 492);
+            this.ClientSize = new System.Drawing.Size(806, 427);
             this.Controls.Add(this.panel1);
             this.Name = "Gui_DKThi";
             this.Text = "Gui_ThemTour";
@@ -245,8 +244,8 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker txtNgaydDk;
         private System.Windows.Forms.ComboBox cbxKhoaThi;
         private System.Windows.Forms.ComboBox cbxTrinhDo;
+        private System.Windows.Forms.TextBox txtNgayDangKy;
     }
 }

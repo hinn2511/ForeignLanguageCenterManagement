@@ -165,10 +165,10 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTimKiem.IconColor = System.Drawing.Color.Black;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiem.IconSize = 24;
+            this.btnTimKiem.IconSize = 1;
             this.btnTimKiem.Location = new System.Drawing.Point(1046, 0);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(191, 48);
@@ -179,14 +179,14 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // Gui_DsKetQua
+            // Gui_DSKetQua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 755);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Gui_DsKetQua";
+            this.Name = "Gui_DSKetQua";
             this.Text = "Gui_GiaTour";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

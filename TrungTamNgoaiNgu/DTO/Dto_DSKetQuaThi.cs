@@ -8,13 +8,10 @@ namespace TrungTamNgoaiNgu.DTO
 {
     public class Dto_DSKetQuaThi
     {
-        public int Id { get; set; }
-        public int SoThuTu { get; set; }
-        public int Id_ThiSinh { get; set; }
-        public int Id_PhongThi { get; set; }
+        public string TenKhoaThi { get; set; }
+        public string TenPhongThi { get; set; }
         public string SBD { get; set; }
         public string TenThiSinh { get; set; }
-        public string TenPhongThi { get; set; }
         public double DiemNghe { get; set; }
         public double DiemNoi { get; set; }
         public double DiemDoc { get; set; }

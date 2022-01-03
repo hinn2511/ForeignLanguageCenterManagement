@@ -128,18 +128,11 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
             
         }
 
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            //OpenChildForm(new Gui_ThongKe());
-            lblTitleChildForm.Text = "THỐNG KÊ";
-        }
-
         private void btnDsTheoKhoa_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             OpenChildForm(new Gui_DSDangKyThi());
-            lblTitleChildForm.Text = "Danh sách đăng ký thi";
+            lblTitleChildForm.Text = "DANH SÁCH ĐĂNG KÝ DỰ THI";
         }
 
         

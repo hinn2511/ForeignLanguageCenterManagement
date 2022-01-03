@@ -8,7 +8,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
 {
     public partial class Gui_DSKetQua : Form
     {
-        List<Dto_DSPhongThi> dsKetQua;
+        List<Dto_DSKetQuaThi> dsKetQua;
         Bus_DSPhongThi bus = new Bus_DSPhongThi();
         public Gui_DSKetQua()
         {
@@ -19,10 +19,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
 
         private void DatTenDanhSach()
         {
-            ketQuaGridView.Columns["Id"].Visible = false;
-            ketQuaGridView.Columns["Id_ThiSinh"].Visible = false;
-            ketQuaGridView.Columns["Id_PhongThi"].Visible = false;
-            ketQuaGridView.Columns["SoThuTu"].Visible = false;
+            ketQuaGridView.Columns["TenKhoaThi"].HeaderText = "Tên khóa thi";
             ketQuaGridView.Columns["TenPhongThi"].HeaderText = "Tên phòng thi";
             ketQuaGridView.Columns["DiemNghe"].HeaderText = "Điểm nghe";
             ketQuaGridView.Columns["DiemDoc"].HeaderText = "Điểm đọc";

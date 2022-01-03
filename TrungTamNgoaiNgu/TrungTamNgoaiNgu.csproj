@@ -83,12 +83,6 @@
     <Compile Include="GUI\GiaoDienChinh\Gui_GiaoDienChinh.designer.cs">
       <DependentUpon>Gui_GiaoDienChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiaoDienDSDangKyThi\DsDangKyThi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GiaoDienDSDangKyThi\DsDangKyThi.Designer.cs">
-      <DependentUpon>DsDangKyThi.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GiaoDienDSDangKyThi\Gui_DSDangKyThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,9 +165,6 @@
     </Compile>
     <EmbeddedResource Include="GUI\GiaoDienChinh\Gui_GiaoDienChinh.resx">
       <DependentUpon>Gui_GiaoDienChinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiaoDienDSDangKyThi\DsDangKyThi.resx">
-      <DependentUpon>DsDangKyThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoDienDSDangKyThi\Gui_DSDangKyThi.resx">
       <DependentUpon>Gui_DSDangKyThi.cs</DependentUpon>

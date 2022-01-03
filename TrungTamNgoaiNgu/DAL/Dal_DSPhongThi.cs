@@ -30,15 +30,13 @@ namespace TrungTamNgoaiNgu.DAL
             return dsThi;
         }
 
-        public List<Dto_DSPhongThi> KetQuaTheoSDT(string sdt)
+        public List<Dto_DSKetQuaThi> KetQuaTheoSDT(string sdt)
         {
-            var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.SDT == sdt).Select(t => new Dto_DSPhongThi
+            var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.SDT == sdt).Select(t => new Dto_DSKetQuaThi
             {
-                Id = t.Id,
+                TenKhoaThi = t.PhongThi.KhoaThi.TenKhoaThi,
                 TenPhongThi = t.PhongThi.TenPhongThi,
                 TenThiSinh = t.ThiSinh.HoTen,
-                Id_PhongThi = t.Id_PhongThi,
-                Id_ThiSinh = t.Id_ThiSinh,
                 SBD = t.SBD,
                 DiemDoc = (double)t.DiemDoc,
                 DiemNghe = (double)t.DiemNghe,
@@ -48,15 +46,13 @@ namespace TrungTamNgoaiNgu.DAL
             return dsThi;
         }
 
-        public List<Dto_DSPhongThi> KetQuaTheoTen(string ten)
+        public List<Dto_DSKetQuaThi> KetQuaTheoTen(string ten)
         {
-            var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.HoTen == ten).Select(t => new Dto_DSPhongThi
+            var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.HoTen == ten).Select(t => new Dto_DSKetQuaThi
             {
-                Id = t.Id,
+                TenKhoaThi = t.PhongThi.KhoaThi.TenKhoaThi,
                 TenPhongThi = t.PhongThi.TenPhongThi,
                 TenThiSinh = t.ThiSinh.HoTen,
-                Id_PhongThi = t.Id_PhongThi,
-                Id_ThiSinh = t.Id_ThiSinh,
                 SBD = t.SBD,
                 DiemDoc = (double)t.DiemDoc,
                 DiemNghe = (double)t.DiemNghe,

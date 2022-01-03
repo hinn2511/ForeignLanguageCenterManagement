@@ -105,7 +105,7 @@
             "Nam",
             "Nữ",
             "Khác"});
-            this.cbxGioiTinh.Location = new System.Drawing.Point(164, 105);
+            this.cbxGioiTinh.Location = new System.Drawing.Point(833, 35);
             this.cbxGioiTinh.Name = "cbxGioiTinh";
             this.cbxGioiTinh.Size = new System.Drawing.Size(110, 31);
             this.cbxGioiTinh.TabIndex = 28;
@@ -115,9 +115,9 @@
             this.NgaySinh.CustomFormat = "dd/MM/yyyy";
             this.NgaySinh.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgaySinh.Location = new System.Drawing.Point(476, 101);
+            this.NgaySinh.Location = new System.Drawing.Point(164, 105);
             this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Size = new System.Drawing.Size(155, 30);
+            this.NgaySinh.Size = new System.Drawing.Size(332, 30);
             this.NgaySinh.TabIndex = 26;
             this.NgaySinh.Value = new System.DateTime(2021, 12, 30, 10, 42, 18, 0);
             // 
@@ -126,19 +126,19 @@
             this.NgayCap.CustomFormat = "dd/MM/yyyy";
             this.NgayCap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayCap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayCap.Location = new System.Drawing.Point(467, 224);
+            this.NgayCap.Location = new System.Drawing.Point(164, 221);
             this.NgayCap.Name = "NgayCap";
-            this.NgayCap.Size = new System.Drawing.Size(164, 30);
+            this.NgayCap.Size = new System.Drawing.Size(332, 30);
             this.NgayCap.TabIndex = 26;
             this.NgayCap.Value = new System.DateTime(2021, 12, 30, 10, 42, 18, 0);
             // 
             // txtNoiCap
             // 
             this.txtNoiCap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoiCap.Location = new System.Drawing.Point(801, 224);
+            this.txtNoiCap.Location = new System.Drawing.Point(623, 220);
             this.txtNoiCap.Multiline = true;
             this.txtNoiCap.Name = "txtNoiCap";
-            this.txtNoiCap.Size = new System.Drawing.Size(142, 31);
+            this.txtNoiCap.Size = new System.Drawing.Size(320, 31);
             this.txtNoiCap.TabIndex = 25;
             // 
             // label3
@@ -146,7 +146,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(691, 236);
+            this.label3.Location = new System.Drawing.Point(520, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 19);
             this.label3.TabIndex = 24;
@@ -157,7 +157,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(326, 236);
+            this.label10.Location = new System.Drawing.Point(17, 231);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 19);
             this.label10.TabIndex = 22;
@@ -166,10 +166,10 @@
             // txtNoiSinh
             // 
             this.txtNoiSinh.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoiSinh.Location = new System.Drawing.Point(801, 100);
+            this.txtNoiSinh.Location = new System.Drawing.Point(623, 105);
             this.txtNoiSinh.Multiline = true;
             this.txtNoiSinh.Name = "txtNoiSinh";
-            this.txtNoiSinh.Size = new System.Drawing.Size(142, 31);
+            this.txtNoiSinh.Size = new System.Drawing.Size(320, 31);
             this.txtNoiSinh.TabIndex = 21;
             // 
             // label9
@@ -177,7 +177,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(691, 112);
+            this.label9.Location = new System.Drawing.Point(520, 112);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 19);
             this.label9.TabIndex = 20;
@@ -188,7 +188,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(326, 111);
+            this.label8.Location = new System.Drawing.Point(17, 116);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 19);
             this.label8.TabIndex = 18;
@@ -260,7 +260,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnThem.BackColor = System.Drawing.Color.Gray;
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -290,7 +290,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(164, 35);
             this.txtHoTen.Multiline = true;
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(779, 31);
+            this.txtHoTen.Size = new System.Drawing.Size(517, 31);
             this.txtHoTen.TabIndex = 3;
             // 
             // label5
@@ -298,7 +298,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(17, 112);
+            this.label5.Location = new System.Drawing.Point(722, 42);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 19);
             this.label5.TabIndex = 2;
@@ -317,7 +317,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel2.BackColor = System.Drawing.Color.Gray;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);

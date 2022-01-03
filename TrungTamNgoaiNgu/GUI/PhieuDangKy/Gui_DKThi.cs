@@ -14,13 +14,13 @@ namespace TrungTamNgoaiNgu.GUI
         List <Dto_PhieuDangKy> dsPhieuDk = new List<Dto_PhieuDangKy> ();
         string tenTs;
         int id_Ts;
+        DateTime now = DateTime.Now;
 
         public Gui_DKThi()
         {
             InitializeComponent();
             LayDanhSachKhoaThi();
-            txtNgaydDk.MinDate = DateTime.Now;
-            txtNgaydDk.CustomFormat = "dd/MM/yyyy";
+            
         }
 
         public Gui_DKThi(string name,int id)
@@ -29,6 +29,7 @@ namespace TrungTamNgoaiNgu.GUI
             id_Ts = id;
             tenTs = name;
             txtHoTen.Text = name;
+            txtNgayDangKy.Text = now.ToShortDateString().ToString();
             LayDanhSachKhoaThi();
         }
 
@@ -55,7 +56,7 @@ namespace TrungTamNgoaiNgu.GUI
             pDkMoi.Id_ThiSinh = id_Ts;
             pDkMoi.Id_KhoaThi = tempId;
             pDkMoi.TrinhDo = cbxTrinhDo.SelectedItem.ToString();
-            pDkMoi.NgayDangKy = txtNgaydDk.Value;
+            pDkMoi.NgayDangKy = now;
             if (KtTonTaiDKThi(id_Ts, tempId))
             {
                 if (bus.DKDuThi(pDkMoi))
