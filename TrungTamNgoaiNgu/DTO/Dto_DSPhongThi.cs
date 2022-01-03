@@ -14,6 +14,7 @@ namespace TrungTamNgoaiNgu.DTO
         public int Id_PhongThi { get; set; }
         public string SBD { get; set; }
         public string TenThiSinh { get; set; }
+        public string TenPhongThi { get; set; }
         public double DiemNghe { get; set; }
         public double DiemNoi { get; set; }
         public double DiemDoc { get; set; }

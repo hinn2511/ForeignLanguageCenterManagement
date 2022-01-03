@@ -79,6 +79,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem
             diemGridView.Columns["Id"].Visible = false;
             diemGridView.Columns["Id_ThiSinh"].Visible = false;
             diemGridView.Columns["Id_PhongThi"].Visible = false;
+            diemGridView.Columns["TenPhongThi"].Visible = false;
             diemGridView.Columns["DiemNghe"].HeaderText = "Điểm nghe";
             diemGridView.Columns["DiemDoc"].HeaderText = "Điểm đọc";
             diemGridView.Columns["DiemNoi"].HeaderText = "Điểm nói";
@@ -166,14 +167,14 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem
                 string temp = e.FormattedValue.ToString();
                 if (temp.Contains(","))
                 {
-                    ShowMessage("Điểm không đúng định dạng. Ví dụ: 7.4, 8.0 ,...", "Lỗi");
+                    ShowMessage("Điểm không đúng định dạng. Ví dụ: 17.5, 18.0 ,...", "Lỗi");
                     e.Cancel = true;
                     return;
                 }
                 float diem;
                 if (!float.TryParse(temp, out diem))
                 {
-                    ShowMessage("Điểm không đúng định dạng. Ví dụ: 7.4, 8.0 ,...", "Lỗi");
+                    ShowMessage("Điểm không đúng định dạng. Ví dụ: 17.5, 18.0 ,...", "Lỗi");
                     e.Cancel = true;
                     return;
                 }
@@ -184,9 +185,9 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem
                     e.Cancel = true;
                     return;
                 }
-                if (diem > 10)
+                if (diem > 25)
                 {
-                    ShowMessage("Điểm không thể lớn hơn 10", "Lỗi");
+                    ShowMessage("Điểm không thể lớn hơn 25", "Lỗi");
                     e.Cancel = true;
                     return;
                 }

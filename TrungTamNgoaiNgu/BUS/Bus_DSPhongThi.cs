@@ -38,6 +38,19 @@ namespace TrungTamNgoaiNgu.BUS
             return dsThi;
         }
 
+        public List<Dto_DSPhongThi> LayKetQua(string type, string key)
+        {
+            switch (type)
+            {
+                case "sdt":
+                    var kqsdt = dal_dsphongthi.KetQuaTheoSDT(key);
+                    return kqsdt.Any() ? kqsdt : null;
+                default:
+                    var kgten = dal_dsphongthi.KetQuaTheoTen(key);
+                    return kgten.Any() ? kgten : null;
+            }
+        }
+
         public List<Dto_DSPhongThi> TimKiemThiSinh(string type, string key)
         {
             switch (type)

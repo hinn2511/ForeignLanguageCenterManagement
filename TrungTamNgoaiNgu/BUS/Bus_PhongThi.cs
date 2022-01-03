@@ -51,9 +51,9 @@ namespace TrungTamNgoaiNgu.BUS
                 pt.Id_PhongThi = DSPTA2[(num / 35)].Id;
                 if (num < 10)
                     pt.SBD = "A200" + num.ToString();
-                if (num > 10 && num < 100)
+                if (num >= 10 && num < 100)
                     pt.SBD = "A20" + num.ToString();
-                if (num > 100)
+                if (num >= 100)
                     pt.SBD = "A2" + num.ToString();
                 pt.DiemDoc = 0;
                 pt.DiemNghe = 0;
@@ -70,9 +70,9 @@ namespace TrungTamNgoaiNgu.BUS
                 pt.Id_PhongThi = DSPTB1[(num / 35)].Id;
                 if (num < 10)
                     pt.SBD = "B100" + num.ToString();
-                if (num > 10 && num < 100)
+                if (num >= 10 && num < 100)
                     pt.SBD = "B10" + num.ToString();
-                if (num > 100)
+                if (num >= 100)
                     pt.SBD = "B1" + num.ToString();
                 pt.DiemDoc = 0;
                 pt.DiemNghe = 0;

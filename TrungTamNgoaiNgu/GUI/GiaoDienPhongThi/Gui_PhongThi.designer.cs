@@ -324,6 +324,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
             this.cbxKhoaThi.Name = "cbxKhoaThi";
             this.cbxKhoaThi.Size = new System.Drawing.Size(274, 27);
             this.cbxKhoaThi.TabIndex = 0;
+            this.cbxKhoaThi.SelectedIndexChanged += new System.EventHandler(this.cbxKhoaThi_SelectedIndexChanged);
             this.cbxKhoaThi.DropDownClosed += new System.EventHandler(this.cbxKhoaThi_DropDownClosed);
             // 
             // Gui_PhongThi

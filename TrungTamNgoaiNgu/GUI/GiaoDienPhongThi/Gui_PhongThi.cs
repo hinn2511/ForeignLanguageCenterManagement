@@ -32,8 +32,11 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         private void LayDanhSachPhongThi(int khoaThiId)
         {
             dsPhongThi = bus.LayDanhSachPhongThi(khoaThiId);
-            phongThiGridView.DataSource = dsPhongThi;
-            DatTenDanhSach();
+            if(dsPhongThi != null)
+            {
+                phongThiGridView.DataSource = dsPhongThi;
+                DatTenDanhSach();
+            }
         }
 
         private void DatTenDanhSach()
@@ -105,6 +108,8 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
         {
             if (!ChonKhoaThi())
                 return;
+            if (dsPhongThi == null)
+                return;
             var result = bus.TimKiemPhongThi(dsPhongThi, txtTimKiem.Text);
             phongThiGridView.DataSource = result;
             DatTenDanhSach();
@@ -166,6 +171,13 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
                 bus.TaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
                 ShowMessage("Đã xếp lịch thi thành công", "Thành công");
             }
+        }
+
+        private void cbxKhoaThi_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            phongThiGridView.DataSource = null;
+            if (cbxKhoaThi.SelectedIndex > -1)
+                LayDanhSachPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
         }
     }
 }

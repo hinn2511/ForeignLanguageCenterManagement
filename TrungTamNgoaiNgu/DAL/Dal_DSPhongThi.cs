@@ -34,6 +34,7 @@ namespace TrungTamNgoaiNgu.DAL
             var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.SDT == sdt).Select(t => new Dto_DSPhongThi
             {
                 Id = t.Id,
+                TenPhongThi = t.PhongThi.TenPhongThi,
                 TenThiSinh = t.ThiSinh.HoTen,
                 Id_PhongThi = t.Id_PhongThi,
                 Id_ThiSinh = t.Id_ThiSinh,
@@ -51,6 +52,7 @@ namespace TrungTamNgoaiNgu.DAL
             var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.HoTen == ten).Select(t => new Dto_DSPhongThi
             {
                 Id = t.Id,
+                TenPhongThi = t.PhongThi.TenPhongThi,
                 TenThiSinh = t.ThiSinh.HoTen,
                 Id_PhongThi = t.Id_PhongThi,
                 Id_ThiSinh = t.Id_ThiSinh,

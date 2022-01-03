@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh;
 using TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi;
 using TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem;
 using TrungTamNgoaiNgu.GUI.GiaoDienPhongThi;
@@ -111,19 +112,20 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienChinh
             lblTitleChildForm.Text = "PHÒNG THI";
         }
 
+        //private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            //ActivateButton(sender);
+            //OpenChildForm(new Gui_DSKetQua());
+            //lblTitleChildForm.Text = "TRA CỨU KẾT QUẢ";
+        //}
 
 
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+            
         }
 
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            //OpenChildForm(new Gui_ThongKe());
-            lblTitleChildForm.Text = "THỐNG KÊ";
-        }
     }
 }
