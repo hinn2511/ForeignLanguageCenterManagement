@@ -38,6 +38,8 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSDangKyThi
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbx_Khoathi = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -101,6 +103,8 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSDangKyThi
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtTimKiem);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.cbx_Khoathi);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -128,6 +132,26 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSDangKyThi
             this.label1.Size = new System.Drawing.Size(81, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Khóa thi";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(689, 6);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(380, 30);
+            this.txtTimKiem.TabIndex = 5;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(572, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 23);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tìm kiếm";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Gui_DSDangKyThi
             // 
@@ -158,5 +182,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSDangKyThi
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbx_Khoathi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label2;
     }
 }
