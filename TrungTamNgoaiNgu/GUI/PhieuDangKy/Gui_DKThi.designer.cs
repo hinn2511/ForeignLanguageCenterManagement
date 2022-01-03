@@ -107,7 +107,7 @@
             this.txtNgaydDk.Name = "txtNgaydDk";
             this.txtNgaydDk.Size = new System.Drawing.Size(164, 30);
             this.txtNgaydDk.TabIndex = 26;
-            this.txtNgaydDk.Value = new System.DateTime(2021, 12, 30, 10, 42, 18, 0);
+            this.txtNgaydDk.Value = new System.DateTime(2022, 1, 3, 11, 5, 16, 0);
             // 
             // label10
             // 

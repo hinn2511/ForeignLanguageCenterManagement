@@ -19,6 +19,8 @@ namespace TrungTamNgoaiNgu.GUI
         {
             InitializeComponent();
             LayDanhSachKhoaThi();
+            txtNgaydDk.MinDate = DateTime.Now;
+            txtNgaydDk.CustomFormat = "dd/MM/yyyy";
         }
 
         public Gui_DKThi(string name,int id)

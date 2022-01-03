@@ -72,8 +72,13 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienThiSinh
 
         private void btn_DkThi_Click(object sender, EventArgs e)
         {
-            Gui_DKThi dkThi = new Gui_DKThi(name, id);
-            dkThi.ShowDialog();
+            if (currentIndex < 0)
+                MessageBox.Show("Vui lòng chọn thí sinh cần đăng ký thi", "Lỗi", MessageBoxButtons.OK);
+            else
+            {
+                Gui_DKThi dkThi = new Gui_DKThi(name, id);
+                dkThi.ShowDialog();
+            }
         }
 
         private void dataGridViewTS_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -92,6 +97,22 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienThiSinh
                 name = (string)dataGridViewTS.Rows[e.RowIndex].Cells[1].Value;
             }
            
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            List<Dto_ThiSinh> listTimKiem = new List<Dto_ThiSinh>();
+            foreach (var item in dsTS)
+            {
+                if ((item.HoTen.Contains(txtTimKiem.Text)) || (item.CMND.Contains(txtTimKiem.Text)))
+                    listTimKiem.Add(item);
+            }
+            dataGridViewTS.DataSource = listTimKiem;
         }
     }
 }

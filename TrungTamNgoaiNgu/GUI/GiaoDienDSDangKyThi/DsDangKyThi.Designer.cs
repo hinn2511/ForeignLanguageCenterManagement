@@ -32,6 +32,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbx_Khoathi = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -70,12 +72,33 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtTimKiem);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.cbx_Khoathi);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(5, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1229, 60);
             this.panel3.TabIndex = 1;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(543, 11);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(380, 30);
+            this.txtTimKiem.TabIndex = 3;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(428, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tìm kiếm";
             // 
             // cbx_Khoathi
             // 
@@ -123,5 +146,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cbx_Khoathi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }
