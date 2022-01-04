@@ -79,7 +79,6 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem
             diemGridView.Columns["Id"].Visible = false;
             diemGridView.Columns["Id_ThiSinh"].Visible = false;
             diemGridView.Columns["Id_PhongThi"].Visible = false;
-            diemGridView.Columns["TenPhongThi"].Visible = false;
             diemGridView.Columns["DiemNghe"].HeaderText = "Điểm nghe";
             diemGridView.Columns["DiemDoc"].HeaderText = "Điểm đọc";
             diemGridView.Columns["DiemNoi"].HeaderText = "Điểm nói";
