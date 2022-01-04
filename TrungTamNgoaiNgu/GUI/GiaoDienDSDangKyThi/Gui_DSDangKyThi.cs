@@ -50,7 +50,21 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSDangKyThi
                 LayDanhSachDkThi(dsKhoaThi[cbx_Khoathi.SelectedIndex].Id);
         }
 
-     
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            List<Dto_DSDangKyThi> listTimKiem = new List<Dto_DSDangKyThi>();
+            foreach (var item in dsDkThi)
+            {
+                if ((item.hoten.Contains(txtTimKiem.Text)) || (item.cmnd.Contains(txtTimKiem.Text)) || (item.trinhdo.Contains(txtTimKiem.Text)))
+                    listTimKiem.Add(item);
 
+            }
+            dsDangKyThiGridView.DataSource = listTimKiem;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
