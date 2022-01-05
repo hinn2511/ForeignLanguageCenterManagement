@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DangKyThiController.cs" />
     <Compile Include="Controllers\DanhSachThiSinhController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThiSinhController.cs" />
@@ -170,6 +171,8 @@
     <Content Include="Views\ThiSinh\Create.cshtml" />
     <Content Include="Views\ThiSinh\Delete.cshtml" />
     <Content Include="Views\TraCuu\Index.cshtml" />
+    <Content Include="Views\DangKyThi\Index.cshtml" />
+    <Content Include="Views\DangKyThi\DangKyThanhCong.cshtml" />
     <Content Include="Views\DanhSachThiSinh\View.cshtml" />
     <Content Include="Views\DanhSachThiSinh\Index.cshtml" />
     <Content Include="Views\DanhSachThiSinh\Table.cshtml" />

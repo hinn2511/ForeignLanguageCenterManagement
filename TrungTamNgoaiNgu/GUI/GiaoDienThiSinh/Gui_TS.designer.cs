@@ -39,7 +39,6 @@
             this.btnLamMoi = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_DkThi = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
@@ -185,7 +184,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btn_DkThi);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -193,28 +191,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1237, 50);
             this.panel2.TabIndex = 0;
-            // 
-            // btn_DkThi
-            // 
-            this.btn_DkThi.BackColor = System.Drawing.Color.Transparent;
-            this.btn_DkThi.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_DkThi.FlatAppearance.BorderSize = 0;
-            this.btn_DkThi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DkThi.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_DkThi.ForeColor = System.Drawing.Color.Black;
-            this.btn_DkThi.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_DkThi.IconColor = System.Drawing.Color.Black;
-            this.btn_DkThi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_DkThi.IconSize = 1;
-            this.btn_DkThi.Location = new System.Drawing.Point(710, 0);
-            this.btn_DkThi.Name = "btn_DkThi";
-            this.btn_DkThi.Size = new System.Drawing.Size(201, 50);
-            this.btn_DkThi.TabIndex = 13;
-            this.btn_DkThi.Text = "ĐĂNG KÝ DỰ THI";
-            this.btn_DkThi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_DkThi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_DkThi.UseVisualStyleBackColor = false;
-            this.btn_DkThi.Click += new System.EventHandler(this.btn_DkThi_Click);
             // 
             // btnThem
             // 
@@ -232,7 +208,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(180, 50);
             this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "THÊM THÍ SINH";
+            this.btnThem.Text = "ĐĂNG KÝ THI";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
@@ -295,6 +271,5 @@
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnXoa;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private FontAwesome.Sharp.IconButton btn_DkThi;
     }
 }

@@ -96,7 +96,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienNhapDiem
         {
             if (cbxKhoaThi.SelectedIndex < 0)
                 return;
-            LayDanhSachPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
+           LayDanhSachPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id); //???
         }
 
         private void cbxPhongThi_DropDownClosed(object sender, System.EventArgs e)
