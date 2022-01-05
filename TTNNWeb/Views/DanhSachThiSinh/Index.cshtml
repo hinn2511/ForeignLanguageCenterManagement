@@ -1,0 +1,107 @@
+﻿@model TTNNWeb.Models.DanhSachThi
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách thí sinh dự thi</h2>
+
+<script type="text/javascript">
+
+    function layDanhSachPhongThi() {
+
+        var kid = $('#Id_KhoaThi').val();
+
+        $.ajax({
+            url: '@Url.Action("LayDanhSachPhongThi", "DanhSachThiSinh")',
+            type: "GET",
+            dataType: "JSON",
+            data: { khoaThiId: kid },
+            success: function (response) {
+                    $("#Id_PhongThi").html("");
+                    $.each(response, function (index, value) {
+                        $("#Id_PhongThi").append(
+                            $('<option></option>').val(value.Id).html(value.TenPhongThi));
+                    });
+            },
+            error: function (response) {
+                $("#Id_PhongThi").html("");
+            }
+        });
+    }
+
+    function layDanhSachThiSinh() {
+
+        var kid = $('#Id_KhoaThi').val();
+        var pid = $('#Id_PhongThi').val();
+
+        $.ajax({
+            url: '@Url.Action("LayDanhSachThiSinh", "DanhSachThiSinh")',
+            type: "GET",
+            dataType: "JSON",
+            data: { khoaThiId: kid, phongThiId: pid },
+            success: function (response) {
+                $("table tbody").empty();
+                var row = "";
+                $.each(response, function (index, value) {
+
+                    row += "<tr>"
+                        + "<td>" + value.SoThuTu + "</td>"
+                        + "<td>" + value.SBD + "</td>"
+                        + "<td>" + value.TenThiSinh + "</td>"
+                        + "<td>" + '<a href="/ThiSinh/Detail/' + value.Id_ThiSinh + '">Thông tin thí sinh<a/>' + " | "
+                        + '<a href="/ThiSinh/Result?phongThiId=' + value.Id_PhongThi + "&thiSinhId=" + value.Id_ThiSinh + '">Kết quả thi<a/>' + " | "
+                        + '<a href="/ThiSinh/Cetificate/phongThiId=' + value.Id_ThiSinh + "&thiSinhId=" + value.Id_ThiSinh + '">Giấy chứng nhận<a/>' + "</td>"
+                        + "</tr>";
+                });
+                $("table tbody").append(row);
+            },
+            error: function (response) {
+                console.log("error");
+            }
+        });
+    }
+
+
+</script>
+
+<div>
+    <p>
+        Chọn khóa thi:
+        @Html.DropDownListFor(model => model.Id_KhoaThi, ViewBag.dsKhoaThi as SelectList, new { @class = "form-control", @onClick = "layDanhSachPhongThi()" })
+    </p>
+    <p>
+        Chọn phòng thi:
+        @Html.DropDownListFor(model => model.Id_PhongThi, ViewBag.dsPhongThi as SelectList, htmlAttributes: new { @class = "form-control", @onClick = "layDanhSachThiSinh()" })
+
+    </p>
+</div>
+
+<div style="margin: 20px 0">
+    <h4>Chi tiết danh sách</h4>
+</div>
+
+<div  style="min-height: 40vh">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Số thứ tự
+                </th>
+                <th>
+                    Số báo danh
+                </th>
+                <th>
+                    Tên thí sinh
+                </th>
+                <th>
+                    Hành động
+                </th>
+            </tr>
+
+        </thead>
+        <tbody></tbody>
+
+    </table>
+
+</div>

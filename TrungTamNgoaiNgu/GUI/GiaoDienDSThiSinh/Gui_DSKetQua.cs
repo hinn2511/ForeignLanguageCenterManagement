@@ -8,7 +8,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienDSThiSinh
 {
     public partial class Gui_DSKetQua : Form
     {
-        List<Dto_DSKetQuaThi> dsKetQua;
+        List<Dto_KetQuaThi> dsKetQua;
         Bus_DSPhongThi bus = new Bus_DSPhongThi();
         public Gui_DSKetQua()
         {

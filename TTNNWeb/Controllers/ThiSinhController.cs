@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,13 +11,15 @@ namespace TTNNWeb.Controllers
     public class ThiSinhController : Controller
     {
         // GET: ThiSinh
-        Bus_ThiSinh bus = new Bus_ThiSinh();
+        Bus_ThiSinh bus_thiSinh = new Bus_ThiSinh();
+
+        Bus_DSPhongThi bus_DSPhongThi = new Bus_DSPhongThi();
         public ActionResult Index(string key)
         {
-            var dsTS = bus.LayDanhSachThiSinh();
+            var dsTS = bus_thiSinh.LayDanhSachThiSinh();
             if (!string.IsNullOrEmpty(key))
             {
-                dsTS = bus.TimKiemTS(dsTS, key);
+                dsTS = bus_thiSinh.TimKiemTS(dsTS, key);
             }
             return View(dsTS);
         }
@@ -33,28 +36,43 @@ namespace TTNNWeb.Controllers
             if ((string.IsNullOrEmpty(thisinh.HoTen)) || string.IsNullOrEmpty(thisinh.NoiSinh) || string.IsNullOrEmpty(thisinh.CMND) || string.IsNullOrEmpty(thisinh.NoiCap) || string.IsNullOrEmpty(thisinh.GioiTinh) || string.IsNullOrEmpty(thisinh.SDT) || string.IsNullOrEmpty(thisinh.SDT))
             {
                 ViewBag.Error = "Vui lòng điền đầy đủ thông tin";
-                ViewBag.loaiTourList = new SelectList(bus.LayDanhSachThiSinh());
+                ViewBag.loaiTourList = new SelectList(bus_thiSinh.LayDanhSachThiSinh());
                 return View(thisinh);
             }
             else
             {
-                bus.ThemTS(thisinh);
+                bus_thiSinh.ThemTS(thisinh);
                 return RedirectToAction("Index");
             }
         }
 
         public ActionResult Delete(int id)
         {
-            var chitiet = bus.LayThongTinTS(id);
-            return View(bus.convertToDto(chitiet));
+            var chitiet = bus_thiSinh.LayThongTinTS(id);
+            return View(bus_thiSinh.convertToDto(chitiet));
+        }
+
+        public ActionResult Detail(int id)
+        {
+            var chitiet = bus_thiSinh.LayThongTinTS(id);
+            return View(bus_thiSinh.convertToDto(chitiet));
         }
 
         [HttpPost]
         public ActionResult Delete(int id, FormCollection formCollection)
         {
-            bus.XoaTS(id);
+            bus_thiSinh.XoaTS(id);
             return RedirectToAction("Index");
 
+        }
+
+        public ActionResult Result(int phongThiId, int thiSinhId)
+        {
+
+            Debug.WriteLine(phongThiId);
+            Debug.WriteLine(thiSinhId);
+            var ketqua = bus_DSPhongThi.KetQuaThiSinhTheoPhongVaMaThiSinh(phongThiId, thiSinhId);
+            return View(ketqua);
         }
     }
 }

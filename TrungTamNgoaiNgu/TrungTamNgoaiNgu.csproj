@@ -71,7 +71,8 @@
     <Compile Include="DAL\Dal_KhoaThi.cs" />
     <Compile Include="DAL\Dal_ThiSinh.cs" />
     <Compile Include="DTO\Dto_DSDangKyThi.cs" />
-    <Compile Include="DTO\Dto_DSKetQuaThi.cs" />
+    <Compile Include="DTO\Dto_KetQuaThiWeb.cs" />
+    <Compile Include="DTO\Dto_KetQuaThi.cs" />
     <Compile Include="DTO\Dto_DSPhongThi.cs" />
     <Compile Include="DTO\Dto_KhoaThi.cs" />
     <Compile Include="DTO\Dto_PhieuDangKy.cs" />

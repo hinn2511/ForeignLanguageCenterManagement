@@ -38,7 +38,23 @@ namespace TrungTamNgoaiNgu.BUS
             return dsThi;
         }
 
-        public List<Dto_DSKetQuaThi> LayKetQua(string type, string key)
+        public List<Dto_DSPhongThi> DanhSachThiSinhTheoKhoaVaPhong(int khoaThiId, int phongThiId)
+        {
+            var dsThi = dal_dsphongthi.DanhSachThiSinhTheoKhoaVaPhong(khoaThiId, phongThiId);
+            int stt = 1;
+            foreach (var item in dsThi)
+            {
+                item.SoThuTu = stt++;
+            }
+            return dsThi;
+        }
+
+        public Dto_KetQuaThiWeb KetQuaThiSinhTheoPhongVaMaThiSinh(int phongThiId, int thiSinhId)
+        {
+            return dal_dsphongthi.KetQuaTheoPhongVaMaThiSinh(phongThiId, thiSinhId);
+        }
+
+        public List<Dto_KetQuaThi> LayKetQua(string type, string key)
         {
             switch (type)
             {
@@ -51,7 +67,7 @@ namespace TrungTamNgoaiNgu.BUS
             }
         }
 
-        public List<Dto_DSKetQuaThi> TimKiemThiSinh(string type, string key)
+        public List<Dto_KetQuaThi> TimKiemThiSinh(string type, string key)
         {
             switch (type)
             {

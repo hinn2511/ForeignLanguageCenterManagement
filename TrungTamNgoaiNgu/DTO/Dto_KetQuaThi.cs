@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrungTamNgoaiNgu.DTO
 {
-    public class Dto_DSKetQuaThi
+    public class Dto_KetQuaThi
     {
         public string TenKhoaThi { get; set; }
         public string TenPhongThi { get; set; }

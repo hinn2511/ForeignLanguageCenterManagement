@@ -120,12 +120,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DanhSachThiSinhController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThiSinhController.cs" />
     <Compile Include="Controllers\TraCuuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DanhSachThi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,10 +170,14 @@
     <Content Include="Views\ThiSinh\Create.cshtml" />
     <Content Include="Views\ThiSinh\Delete.cshtml" />
     <Content Include="Views\TraCuu\Index.cshtml" />
+    <Content Include="Views\DanhSachThiSinh\View.cshtml" />
+    <Content Include="Views\DanhSachThiSinh\Index.cshtml" />
+    <Content Include="Views\DanhSachThiSinh\Table.cshtml" />
+    <Content Include="Views\ThiSinh\Detail.cshtml" />
+    <Content Include="Views\ThiSinh\Result.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

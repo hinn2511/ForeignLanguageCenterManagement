@@ -15,7 +15,7 @@ namespace TTNNWeb.Controllers
 
         public ActionResult Index(string boLoc, string tuKhoa)
         {
-           
+
             if (!string.IsNullOrEmpty(boLoc) && !string.IsNullOrEmpty(tuKhoa))
             {
                 var dsKetQua = bus.TimKiemThiSinh(boLoc, tuKhoa);
@@ -30,7 +30,10 @@ namespace TTNNWeb.Controllers
             if (string.IsNullOrEmpty(tuKhoa))
                 ViewBag.Error = "Vui lòng nhập từ khóa cần tìm kiếm.";
             return View();
-           
+
         }
+
+
     }
+       
 }

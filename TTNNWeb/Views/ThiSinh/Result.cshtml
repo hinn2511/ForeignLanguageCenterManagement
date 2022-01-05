@@ -1,0 +1,82 @@
+﻿@model TrungTamNgoaiNgu.DTO.Dto_KetQuaThiWeb
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Kết quả dự thi</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên khóa thi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhoaThi)
+        </dd>
+        <dt>
+            Trình độ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrinhDo)
+        </dd>
+        <dt>
+            Tên phòng thi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenPhongThi)
+        </dd>
+
+        <dt>
+            Số báo danh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SBD)
+        </dd>
+
+        <dt>
+            Tên thí sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenThiSinh)
+        </dd>
+
+        <dt>
+            Điểm nghe
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemNghe)
+        </dd>
+
+        <dt>
+            Điểm nói
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemNoi)
+        </dd>
+
+        <dt>
+            Điểm đọc
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemDoc)
+        </dd>
+
+        <dt>
+            Điểm viết
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemViet)
+        </dd>
+
+    </dl>
+</div>
