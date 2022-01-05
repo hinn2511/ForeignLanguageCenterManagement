@@ -30,6 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dtpNgayDangKy = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbxTrinhDo = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbxKhoaThi = new System.Windows.Forms.ComboBox();
             this.cbxGioiTinh = new System.Windows.Forms.ComboBox();
             this.NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.NgayCap = new System.Windows.Forms.DateTimePicker();
@@ -39,6 +44,7 @@
             this.txtNoiSinh = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSdt = new System.Windows.Forms.TextBox();
@@ -65,12 +71,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(987, 570);
+            this.panel1.Size = new System.Drawing.Size(987, 674);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.dtpNgayDangKy);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.cbxTrinhDo);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.cbxKhoaThi);
             this.panel3.Controls.Add(this.cbxGioiTinh);
             this.panel3.Controls.Add(this.NgaySinh);
             this.panel3.Controls.Add(this.NgayCap);
@@ -80,6 +91,7 @@
             this.panel3.Controls.Add(this.txtNoiSinh);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txtEmail);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtSdt);
@@ -94,8 +106,62 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(987, 515);
+            this.panel3.Size = new System.Drawing.Size(987, 619);
             this.panel3.TabIndex = 1;
+            // 
+            // dtpNgayDangKy
+            // 
+            this.dtpNgayDangKy.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayDangKy.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayDangKy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayDangKy.Location = new System.Drawing.Point(164, 492);
+            this.dtpNgayDangKy.Name = "dtpNgayDangKy";
+            this.dtpNgayDangKy.Size = new System.Drawing.Size(332, 30);
+            this.dtpNgayDangKy.TabIndex = 32;
+            this.dtpNgayDangKy.Value = new System.DateTime(2021, 12, 30, 10, 42, 18, 0);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(17, 502);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(135, 19);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "NGÀY ĐĂNG KÝ";
+            // 
+            // cbxTrinhDo
+            // 
+            this.cbxTrinhDo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTrinhDo.FormattingEnabled = true;
+            this.cbxTrinhDo.Items.AddRange(new object[] {
+            "A2",
+            "B1"});
+            this.cbxTrinhDo.Location = new System.Drawing.Point(623, 419);
+            this.cbxTrinhDo.Name = "cbxTrinhDo";
+            this.cbxTrinhDo.Size = new System.Drawing.Size(320, 31);
+            this.cbxTrinhDo.TabIndex = 30;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(520, 431);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 19);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "TRÌNH ĐỘ";
+            // 
+            // cbxKhoaThi
+            // 
+            this.cbxKhoaThi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxKhoaThi.FormattingEnabled = true;
+            this.cbxKhoaThi.Location = new System.Drawing.Point(164, 419);
+            this.cbxKhoaThi.Name = "cbxKhoaThi";
+            this.cbxKhoaThi.Size = new System.Drawing.Size(332, 31);
+            this.cbxKhoaThi.TabIndex = 28;
             // 
             // cbxGioiTinh
             // 
@@ -194,6 +260,17 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "NGÀY SINH";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(17, 431);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 19);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "KHÓA THI";
+            // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,7 +327,7 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(738, 447);
+            this.btnHuy.Location = new System.Drawing.Point(738, 548);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(205, 48);
             this.btnHuy.TabIndex = 12;
@@ -265,11 +342,11 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(490, 447);
+            this.btnThem.Location = new System.Drawing.Point(490, 548);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(205, 48);
             this.btnThem.TabIndex = 11;
-            this.btnThem.Text = "THÊM";
+            this.btnThem.Text = "ĐĂNG KÝ";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -332,15 +409,15 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 19);
+            this.label1.Size = new System.Drawing.Size(146, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "THÊM THÍ SINH";
+            this.label1.Text = "ĐĂNG KÝ DỰ THI";
             // 
             // Gui_ThemTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 570);
+            this.ClientSize = new System.Drawing.Size(987, 674);
             this.Controls.Add(this.panel1);
             this.Name = "Gui_ThemTS";
             this.Text = "Gui_ThemTour";
@@ -379,5 +456,11 @@
         private System.Windows.Forms.DateTimePicker NgayCap;
         private System.Windows.Forms.DateTimePicker NgaySinh;
         private System.Windows.Forms.ComboBox cbxGioiTinh;
+        private System.Windows.Forms.ComboBox cbxKhoaThi;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dtpNgayDangKy;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbxTrinhDo;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -23,6 +23,7 @@ namespace TrungTamNgoaiNgu.BUS
 
         public List<Dto_PhongThi> LayDanhSachPhongThi(int khoaThiId)
         {
+            // ????
             var dsPhongThi = dal_phongthi.DanhSachPhongThiTheoKhoa(khoaThiId);
             return dsPhongThi.Any() ? dsPhongThi : null;
         }

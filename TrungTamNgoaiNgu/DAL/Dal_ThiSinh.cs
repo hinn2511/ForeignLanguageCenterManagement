@@ -27,6 +27,8 @@ namespace TrungTamNgoaiNgu.DAL
             return TS;
         }
 
+
+
         public bool ThemTs(ThiSinh thiSinh)
         {
             context.ThiSinhs.InsertOnSubmit(thiSinh);
@@ -66,6 +68,12 @@ namespace TrungTamNgoaiNgu.DAL
         {
             var ts = context.ThiSinhs.FirstOrDefault(t => t.Id == id);
             return ts;
+        }
+
+        public int MaThiSihhMoiNhat()
+        {
+            int mats = context.ThiSinhs.OrderByDescending(ts => ts.Id).First().Id;
+            return mats;
         }
     }
 }

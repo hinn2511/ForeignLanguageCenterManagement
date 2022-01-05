@@ -19,6 +19,24 @@ namespace TrungTamNgoaiNgu.BUS
             if (dal.ThemTs(dtoToEntity(TS))) return true;
             return false;
         }
+// Thêm thí sinh dto thisinh2
+        public bool ThemTS(Dto_ThiSinh_PhieuDangKy TS2)
+        {
+            Dto_ThiSinh TS = new Dto_ThiSinh();
+            TS.HoTen = TS2.HoTen;
+            TS.GioiTinh = TS2.GioiTinh;
+            TS.NgaySinh = TS2.NgaySinh;
+            TS.NoiSinh = TS2.NoiSinh;
+            TS.CMND = TS2.CMND;
+            TS.NgayCap = TS2.NgayCap;
+            TS.NoiCap = TS2.NoiCap;
+            TS.SDT = TS2.SDT;
+            TS.Email = TS2.Email;
+
+            if (dal.ThemTs(dtoToEntity(TS))) return true;
+            return false;
+        }
+
 
         public bool XoaTS(int id)
         {
@@ -41,6 +59,11 @@ namespace TrungTamNgoaiNgu.BUS
         public ThiSinh LayThongTinTS(int id)
         {
            return dal.LayThongTinTS(id);
+        }
+
+        public int LayThiSinhVuaThem()
+        {
+            return dal.MaThiSihhMoiNhat();
         }
 
         public ThiSinh dtoToEntity (Dto_ThiSinh dto)

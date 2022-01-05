@@ -77,6 +77,7 @@
     <Compile Include="DTO\Dto_PhieuDangKy.cs" />
     <Compile Include="DTO\Dto_PhongThi.cs" />
     <Compile Include="DTO\Dto_ThiSinh.cs" />
+    <Compile Include="DTO\Dto_ThiSinh_PhieuDangKy.cs" />
     <Compile Include="GUI\GiaoDienChinh\Gui_GiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
