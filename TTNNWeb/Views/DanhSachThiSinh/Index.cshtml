@@ -18,6 +18,7 @@
             dataType: "JSON",
             data: { khoaThiId: kid },
             success: function (response) {
+                $("table tbody").empty();
                     $("#Id_PhongThi").html("");
                     $.each(response, function (index, value) {
                         $("#Id_PhongThi").append(
@@ -26,6 +27,7 @@
             },
             error: function (response) {
                 $("#Id_PhongThi").html("");
+                $("table tbody").empty();
             }
         });
     }
@@ -68,12 +70,11 @@
 <div>
     <p>
         Chọn khóa thi:
-        @Html.DropDownListFor(model => model.Id_KhoaThi, ViewBag.dsKhoaThi as SelectList, new { @class = "form-control", @onClick = "layDanhSachPhongThi()" })
+        @Html.DropDownListFor(model => model.Id_KhoaThi, ViewBag.dsKhoaThi as SelectList, new { @class = "form-control", @onChange = "layDanhSachPhongThi()" })
     </p>
     <p>
         Chọn phòng thi:
         @Html.DropDownListFor(model => model.Id_PhongThi, ViewBag.dsPhongThi as SelectList, htmlAttributes: new { @class = "form-control", @onClick = "layDanhSachThiSinh()" })
-
     </p>
 </div>
 
