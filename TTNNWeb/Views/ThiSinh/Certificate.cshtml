@@ -1,0 +1,101 @@
+﻿@model TrungTamNgoaiNgu.DTO.Dto_GiayChungNhan
+
+@{
+    ViewBag.Title = "Certificate";
+}
+
+<style>
+    body {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("https://static.wixstatic.com/media/9d8ed5_64b820680dbe4c408e41f203c994f8b5~mv2.png/v1/fill/w_1000,h_1017,al_c,usm_0.66_1.00_0.01/9d8ed5_64b820680dbe4c408e41f203c994f8b5~mv2.png");
+    }
+
+    .dl-horizontal dt {
+        text-align: left;
+        font-weight: 200;
+    }
+
+    .dl-horizontal dd {
+        font-weight: bold; 
+    }
+
+    .dl-horizontal dt, .dl-horizontal dd {
+       line-height: 1.7;
+    }
+
+    .point > td {
+        line-height: 1.7;
+        font-weight: bold;
+    }
+
+</style>
+
+<div class="text-center" style=" margin-top: 5vh">
+    <h3 class="text-uppercase">cộng hòa xã hội chủ nghĩa việt nam</h3>
+    <h4 class="text-capitalize" style="text-decoration: underline; line-height: 200%">độc lập - tự do - hạnh phúc</h4>
+    <h1 class="text-uppercase" style="color: red">chứng chỉ ngoại ngữ</h1>
+    <p>Ngôn ngữ: Tiếng Anh</p>
+    <p>Trình độ: @Model.TrinhDo</p>
+    <h4 class="text-capitalize">trung tâm ngoại ngữ</h4>
+    <h5>Cấp cho</h5>
+    
+</div>
+<div style="padding: 5vh 20vw;">
+    <dl class="dl-horizontal">
+        <dt>
+            Họ và tên:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenThiSinh)
+        </dd>
+
+        <dt>
+            Ngày sinh:
+        </dt>
+
+        <dd>
+            @Html.ValueFor(model => model.NgaySinh, "{0:dd/MM/yyyy}")
+        </dd>
+    </dl>
+
+    <p>Đã tham dự kỳ thi đánh giá năng lực ngoại ngữ theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam</p>
+
+    <dl class="dl-horizontal">
+        <dt>
+            Ngày thi:
+        </dt>
+
+        <dd>
+            @Html.ValueFor(model => model.NgayThi, "{0:dd/MM/yyyy}")
+        </dd>
+
+        <dt>
+            Điểm thi:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemThi)
+        </dd>
+    </dl>
+
+    <table style="width:100%">
+        <tr>
+            <td>Nghe</td>
+            <td>Nói</td>
+            <td>Đọc</td>
+            <td>Viết</td>
+        </tr>
+        <tr class="point">
+            <td>@Html.DisplayFor(model => model.DiemNghe)</td>
+            <td>@Html.DisplayFor(model => model.DiemNoi)</td>
+            <td>@Html.DisplayFor(model => model.DiemDoc)</td>
+            <td>@Html.DisplayFor(model => model.DiemViet)</td>
+        </tr>
+    </table>
+    <div class="text-right">
+        <p style="margin-top: 5vh">@ViewBag.thoiGian</p>
+        <h4 style="margin-top: 5vh; margin-right: 5vw">Hiệu trưởng</h4>
+        <img style="max-width: 15vw" src="https://tungtang.com.vn/blog/wp-content/uploads/2021/11/chu-ky-phong-thuy-tung-tang6.png" />
+    </div>
+</div>
+

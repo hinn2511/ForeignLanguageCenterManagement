@@ -81,6 +81,22 @@ namespace TrungTamNgoaiNgu.DAL
             return ketQua;
         }
 
+        public Dto_GiayChungNhan LayGiayChungNhan(int phongThiId, int thiSinhId)
+        {
+            var chungnhan = context.DanhSachPhongThis.Where(t => t.Id_PhongThi == phongThiId && t.Id_ThiSinh == thiSinhId).Select(t => new Dto_GiayChungNhan
+            {
+                TenThiSinh = t.ThiSinh.HoTen,
+                NgaySinh = t.ThiSinh.NgaySinh,
+                NgayThi = t.PhongThi.KhoaThi.NgayThi,
+                TrinhDo = t.PhongThi.TrinhDo,
+                DiemDoc = (double)t.DiemDoc,
+                DiemNghe = (double)t.DiemNghe,
+                DiemNoi = (double)t.DiemNoi,
+                DiemViet = (double)t.DiemViet,
+            }).FirstOrDefault();
+            return chungnhan;
+        }
+
         public List<Dto_KetQuaThi> KetQuaTheoTen(string ten)
         {
             var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.HoTen == ten).Select(t => new Dto_KetQuaThi

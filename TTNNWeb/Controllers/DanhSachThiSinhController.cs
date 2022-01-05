@@ -12,6 +12,7 @@ namespace TTNNWeb.Controllers
     public class DanhSachThiSinhController : Controller
     {
         Bus_DSPhongThi bus_dsPhongThi = new Bus_DSPhongThi();
+
         public ActionResult Index()
         {
             var dsKhoaThi = bus_dsPhongThi.LayDanhSachKhoaThi();
@@ -21,12 +22,13 @@ namespace TTNNWeb.Controllers
         }
         public ActionResult LayDanhSachPhongThi(int? khoaThiId)
         {
+
             List<Dto_PhongThi> dsPhongThi = bus_dsPhongThi.LayDanhSachPhongThi((int)khoaThiId);
 
             return Json(dsPhongThi, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult LayDanhSachThiSinh(int? khoaThiId,int? phongThiId)
+        public ActionResult LayDanhSachThiSinh(int? khoaThiId, int? phongThiId)
         {
             List<Dto_DSPhongThi> dsThiSinhTheoPhong = bus_dsPhongThi.DanhSachThiSinhTheoKhoaVaPhong((int)khoaThiId, (int)phongThiId);
 

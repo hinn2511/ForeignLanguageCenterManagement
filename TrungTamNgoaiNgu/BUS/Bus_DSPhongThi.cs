@@ -55,6 +55,11 @@ namespace TrungTamNgoaiNgu.BUS
             return dal_dsphongthi.KetQuaTheoPhongVaMaThiSinh(phongThiId, thiSinhId);
         }
 
+        public Dto_GiayChungNhan LayGiayChungNhan(int phongThiId, int thiSinhId)
+        {
+            return dal_dsphongthi.LayGiayChungNhan(phongThiId, thiSinhId);
+        }
+
         public List<Dto_KetQuaThi> LayKetQua(string type, string key)
         {
             switch (type)
