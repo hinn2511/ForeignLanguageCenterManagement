@@ -1,0 +1,103 @@
+﻿@model List<TrungTamNgoaiNgu.DTO.Dto_DSKetQuaThi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tra cứu kết quả thi</h2>
+
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+
+        <p>
+            Bộ lọc
+            <select style="padding: 5px; margin-right: 20px" name="boLoc">
+                <option value="sdt">Số điện thoại</option>
+                <option value="ten">Họ tên</option>
+            </select>
+
+            Tìm kiếm: <input type="text" name="tuKhoa" />
+            <input style="margin-right: 20px" type="submit" value="Tìm kiếm" class="btn btn-default" />
+
+        </p>
+    </div>
+    @if (ViewBag.Error != null)
+    {
+        <h5 style="color:red">@ViewBag.Error</h5>
+    }
+</form>
+<div style="min-height:50vh">
+    @if (Model != null)
+    {
+        <div style="margin:20px 0">
+            <h4>
+                @ViewBag.timKiem
+            </h4>
+
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Tên khóa thi
+                </th>
+                <th>
+                    Tên phòng thi
+                </th>
+                <th>
+                    Số báo danh
+                </th>
+                <th>
+                    Tên thí sinh
+                </th>
+                <th>
+                    Điểm nghe
+                </th>
+                <th>
+                    Điểm nói
+                </th>
+                <th>
+                    Điểm đọc
+                </th>
+                <th>
+                    Điểm viết
+                </th>
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenKhoaThi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenPhongThi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SBD)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenThiSinh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiemNghe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiemNoi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiemDoc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiemViet)
+                    </td>
+
+                </tr>
+            }
+
+
+
+        </table>
+
+    }
+</div>

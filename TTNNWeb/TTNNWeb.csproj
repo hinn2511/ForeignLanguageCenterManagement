@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThiSinhController.cs" />
+    <Compile Include="Controllers\TraCuuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -166,6 +167,7 @@
     <Content Include="Views\ThiSinh\Index.cshtml" />
     <Content Include="Views\ThiSinh\Create.cshtml" />
     <Content Include="Views\ThiSinh\Delete.cshtml" />
+    <Content Include="Views\TraCuu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

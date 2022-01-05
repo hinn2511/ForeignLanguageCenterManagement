@@ -43,7 +43,7 @@ namespace TrungTamNgoaiNgu.DAL
                 DiemNoi = (double)t.DiemNoi,
                 DiemViet = (double)t.DiemViet,
             }).ToList();
-            return dsThi;
+            return dsThi.Any() ? dsThi : null;
         }
 
         public List<Dto_DSKetQuaThi> KetQuaTheoTen(string ten)
@@ -59,7 +59,7 @@ namespace TrungTamNgoaiNgu.DAL
                 DiemNoi = (double)t.DiemNoi,
                 DiemViet = (double)t.DiemViet,
             }).ToList();
-            return dsThi;
+            return dsThi.Any() ? dsThi : null;
         }
 
         public int SoLuongThiSinhTheoKhoa(int khoaThiId)
