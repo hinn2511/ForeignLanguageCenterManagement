@@ -9,9 +9,31 @@ namespace TrungTamNgoaiNgu.BUS
     {
         Dal_KhoaThi dal = new Dal_KhoaThi();
 
+        Dal_DSPhongThi dal_dsphongthi = new Dal_DSPhongThi();
+
         public List<Dto_KhoaThi> LayDanhSachKhoaThi()
         {
-            return dal.DanhSachKhoaThi();
+            var dsKhoaThi = dal.DanhSachKhoaThi();
+            return dsKhoaThi;
+        }
+
+        public bool DaTaoDanhSachThi(int khoaThiId)
+        {
+            if (dal_dsphongthi.SoLuongThiSinhTheoKhoa(khoaThiId) > 0)
+                return true;
+            return false;
+        }
+
+        public List<Dto_KhoaThi> LayDanhSachKhoaThiChuaLapDanhSach()
+        {
+            var dsKhoaThi = dal.DanhSachKhoaThi();
+            List<Dto_KhoaThi> dsMoi = new List<Dto_KhoaThi>();
+            foreach (var item in dsKhoaThi)
+            {
+                if(!DaTaoDanhSachThi(item.Id))
+                    dsMoi.Add(item);
+            }    
+            return dsMoi;
         }
 
         public List<Dto_KhoaThi> TimKiemKhoaThi(List<Dto_KhoaThi> dsKhoaThi, string key)

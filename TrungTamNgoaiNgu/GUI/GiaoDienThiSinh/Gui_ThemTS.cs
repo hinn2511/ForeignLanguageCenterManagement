@@ -30,7 +30,7 @@ namespace TrungTamNgoaiNgu.GUI
 
         private void LayDanhSachKhoaThi()
         {
-            dsKhoaThi = busKhoaThi.LayDanhSachKhoaThi();
+            dsKhoaThi = busKhoaThi.LayDanhSachKhoaThiChuaLapDanhSach();
             foreach (var item in dsKhoaThi)
             {
                 cbxKhoaThi.Items.Add(item.TenKhoaThi);
