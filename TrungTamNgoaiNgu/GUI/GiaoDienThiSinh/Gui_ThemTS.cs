@@ -22,6 +22,7 @@ namespace TrungTamNgoaiNgu.GUI
             InitializeComponent();
             dtpNgayDangKy.Text = now.ToShortDateString().ToString();
             LayDanhSachKhoaThi();
+            dtpNgayDangKy.Enabled = false;
         }
 
         private void LayDanhSachKhoaThi()
