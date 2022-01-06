@@ -63,6 +63,12 @@ namespace TrungTamNgoaiNgu.DAL
             return dsThi.Any() ? dsThi : null;
         }
 
+        public bool KiemTraSBD(int khoaThiId, string sbd)
+        {
+            var soBD = context.DanhSachPhongThis.FirstOrDefault(t => t.PhongThi.KhoaThi.Id == khoaThiId && t.SBD == sbd);
+            return soBD != null ? true : false;
+        }
+
         public Dto_KetQuaThiWeb KetQuaTheoPhongVaMaThiSinh(int phongThiId, int thiSinhId)
         {
             var ketQua = context.DanhSachPhongThis.Where(t => t.Id_PhongThi == phongThiId && t.Id_ThiSinh == thiSinhId).Select(t => new Dto_KetQuaThiWeb
@@ -84,6 +90,22 @@ namespace TrungTamNgoaiNgu.DAL
         public Dto_GiayChungNhan LayGiayChungNhan(int phongThiId, int thiSinhId)
         {
             var chungnhan = context.DanhSachPhongThis.Where(t => t.Id_PhongThi == phongThiId && t.Id_ThiSinh == thiSinhId).Select(t => new Dto_GiayChungNhan
+            {
+                TenThiSinh = t.ThiSinh.HoTen,
+                NgaySinh = t.ThiSinh.NgaySinh,
+                NgayThi = t.PhongThi.KhoaThi.NgayThi,
+                TrinhDo = t.PhongThi.TrinhDo,
+                DiemDoc = (double)t.DiemDoc,
+                DiemNghe = (double)t.DiemNghe,
+                DiemNoi = (double)t.DiemNoi,
+                DiemViet = (double)t.DiemViet,
+            }).FirstOrDefault();
+            return chungnhan;
+        }
+
+        public Dto_GiayChungNhan LayGiayChungNhan(int khoaThiId, string sbd)
+        {
+            var chungnhan = context.DanhSachPhongThis.Where(t => t.PhongThi.KhoaThi.Id == khoaThiId && t.SBD == sbd).Select(t => new Dto_GiayChungNhan
             {
                 TenThiSinh = t.ThiSinh.HoTen,
                 NgaySinh = t.ThiSinh.NgaySinh,

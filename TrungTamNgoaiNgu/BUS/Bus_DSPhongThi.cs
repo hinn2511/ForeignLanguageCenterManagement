@@ -23,7 +23,6 @@ namespace TrungTamNgoaiNgu.BUS
 
         public List<Dto_PhongThi> LayDanhSachPhongThi(int khoaThiId)
         {
-            // ????
             var dsPhongThi = dal_phongthi.DanhSachPhongThiTheoKhoa(khoaThiId);
             return dsPhongThi.Any() ? dsPhongThi : null;
         }
@@ -55,9 +54,24 @@ namespace TrungTamNgoaiNgu.BUS
             return dal_dsphongthi.KetQuaTheoPhongVaMaThiSinh(phongThiId, thiSinhId);
         }
 
+
         public Dto_GiayChungNhan LayGiayChungNhan(int phongThiId, int thiSinhId)
         {
-            return dal_dsphongthi.LayGiayChungNhan(phongThiId, thiSinhId);
+            var cn = dal_dsphongthi.LayGiayChungNhan(phongThiId, thiSinhId);
+            cn.DiemThi = (cn.DiemNghe + cn.DiemNoi + cn.DiemDoc + cn.DiemViet) / 10;
+            return cn;
+        }
+
+        public bool TonTaiSBD(int khoaThi, string sbd)
+        {
+            return dal_dsphongthi.KiemTraSBD(khoaThi, sbd);
+        }
+
+        public Dto_GiayChungNhan LayGiayChungNhan(int khoaThi, string sbd)
+        {
+            var cn = dal_dsphongthi.LayGiayChungNhan(khoaThi, sbd);
+            cn.DiemThi = (cn.DiemNghe + cn.DiemNoi + cn.DiemDoc + cn.DiemViet) / 10;
+            return cn;
         }
 
         public List<Dto_KetQuaThi> LayKetQua(string type, string key)

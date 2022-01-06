@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Giấy chứng nhận</h2>
+<div  style="min-height:50vh">
+    <form asp-action="Index" method="get">
+        <div class="form-actions no-color">
+
+            <p>
+                Bộ lọc
+                <select style="padding: 5px; margin-right: 20px" name="khoaThiId">
+                    @foreach (var item in ViewBag.dsKhoaThi)
+                    {
+                        <option value="@item.Id">@item.TenKhoaThi</option>
+                    }
+                </select>
+
+                Số báo danh: <input type="text" name="sbd" />
+                <input style="margin-right: 20px" type="submit" value="Xem giấy chứng nhận" class="btn btn-default" />
+                @if (ViewBag.Error != null)
+                {
+                    <h5 style="color:red">@ViewBag.Error</h5>
+                }
+            </p>
+        </div>
+    </form>
+
+</div>

@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DangKyThiController.cs" />
     <Compile Include="Controllers\DanhSachThiSinhController.cs" />
+    <Compile Include="Controllers\GiayChungNhanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThiSinhController.cs" />
     <Compile Include="Controllers\TraCuuController.cs" />
@@ -173,12 +174,11 @@
     <Content Include="Views\TraCuu\Index.cshtml" />
     <Content Include="Views\DangKyThi\Index.cshtml" />
     <Content Include="Views\DangKyThi\DangKyThanhCong.cshtml" />
-    <Content Include="Views\DanhSachThiSinh\View.cshtml" />
     <Content Include="Views\DanhSachThiSinh\Index.cshtml" />
-    <Content Include="Views\DanhSachThiSinh\Table.cshtml" />
     <Content Include="Views\ThiSinh\Detail.cshtml" />
     <Content Include="Views\ThiSinh\Result.cshtml" />
     <Content Include="Views\ThiSinh\Certificate.cshtml" />
+    <Content Include="Views\GiayChungNhan\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

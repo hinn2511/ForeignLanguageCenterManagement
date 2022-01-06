@@ -27,7 +27,7 @@ namespace TTNNWeb.Controllers
                 else
                     ViewBag.Error = "Không tìm thấy thí sinh dự thi.";
             }
-            if (string.IsNullOrEmpty(tuKhoa))
+            if (!string.IsNullOrEmpty(boLoc) && string.IsNullOrEmpty(tuKhoa))
                 ViewBag.Error = "Vui lòng nhập từ khóa cần tìm kiếm.";
             return View();
 

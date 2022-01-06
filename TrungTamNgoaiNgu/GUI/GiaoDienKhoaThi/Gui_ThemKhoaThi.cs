@@ -42,6 +42,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienKhoaThi
                     ShowMessage("Thêm khóa thi thất bại", "Thất bại");
                     break;
             }
+            Close();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

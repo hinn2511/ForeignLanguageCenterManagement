@@ -30,6 +30,8 @@
                         $("#Id_PhongThi").append(
                             $('<option></option>').val(value.Id).html(value.TenPhongThi));
                     });
+                    $('#Id_PhongThi').val(1);
+                    layDanhSachThiSinh();
             },
             error: function (response) {
                 $("table tbody").empty();

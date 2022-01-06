@@ -185,6 +185,7 @@ namespace TrungTamNgoaiNgu.GUI.GiaoDienPhongThi
             {
                 bus.TaoDanhSachThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
                 ShowMessage("Đã xếp lịch thi thành công", "Thành công");
+                LayDanhSachPhongThi(dsKhoaThi[cbxKhoaThi.SelectedIndex].Id);
             }
         }
 

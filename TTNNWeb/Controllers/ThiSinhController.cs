@@ -75,7 +75,7 @@ namespace TTNNWeb.Controllers
         public ActionResult Certificate(int phongThiId, int thiSinhId)
         {
             var cn = bus_DSPhongThi.LayGiayChungNhan(phongThiId, thiSinhId);
-            cn.DiemThi = (cn.DiemNghe + cn.DiemNoi + cn.DiemDoc + cn.DiemViet) / 10;
+            
             ViewBag.thoiGian = "TP.HCM, ngày " + DateTime.Now.Day.ToString() + " tháng " + DateTime.Now.Month.ToString() + " năm " + DateTime.Now.Year.ToString();
             return View(cn);
         }
