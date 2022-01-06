@@ -33,8 +33,8 @@ namespace TrungTamNgoaiNgu.BUS
         {
             int soLuongThiSinhA2 = dal_phieudk.LaySoLuongDangKy(khoaThiId, "A2");
             int soLuongThiSinhB1 = dal_phieudk.LaySoLuongDangKy(khoaThiId, "B1");
-            int soPhongA2 = dal_phongthi.SoLuongPhongThiTheoKhoaVaTrinhDo(khoaThiId, "A2");
-            int soPhongB1 = dal_phongthi.SoLuongPhongThiTheoKhoaVaTrinhDo(khoaThiId, "B1");
+            int soPhongA2 = dal_phongthi.SoLuongPhongThi(khoaThiId, "A2");
+            int soPhongB1 = dal_phongthi.SoLuongPhongThi(khoaThiId, "B1");
             if (soLuongThiSinhA2 > soPhongA2 * 35 || soLuongThiSinhB1 > soPhongB1 * 35)
                 return false;
             return true;
@@ -46,8 +46,8 @@ namespace TrungTamNgoaiNgu.BUS
         {
             List<Dto_PhieuDangKy> DSDKA2 = dal_phieudk.LayDanhSachDangKy(khoaThiId, "A2");
             List<Dto_PhieuDangKy> DSDKB1 = dal_phieudk.LayDanhSachDangKy(khoaThiId, "B1");
-            List<Dto_PhongThi> DSPTA2 = dal_phongthi.DanhSachPhongThiTheoKhoaVaTrinhDo(khoaThiId, "A2");
-            List<Dto_PhongThi> DSPTB1 = dal_phongthi.DanhSachPhongThiTheoKhoaVaTrinhDo(khoaThiId, "B1");
+            List<Dto_PhongThi> DSPTA2 = dal_phongthi.DanhSachPhongThi(khoaThiId, "A2");
+            List<Dto_PhongThi> DSPTB1 = dal_phongthi.DanhSachPhongThi(khoaThiId, "B1");
             int num = 1;
             foreach (var item in DSDKA2)
             {
@@ -109,7 +109,7 @@ namespace TrungTamNgoaiNgu.BUS
 
         public List<Dto_PhongThi> LayDanhSachPhongThi(int khoaThiId)
         {
-            var dsPhongThi = dal_phongthi.DanhSachPhongThiTheoKhoa(khoaThiId);
+            var dsPhongThi = dal_phongthi.DanhSachPhongThi(khoaThiId);
             return dsPhongThi.Any() ? dsPhongThi : null;
         }
 
@@ -128,7 +128,7 @@ namespace TrungTamNgoaiNgu.BUS
 
         public string TaoTenPhongThi(int khoaThiId, string trinhDo)
         {
-            int sl = dal_phongthi.SoLuongPhongThiTheoKhoa(khoaThiId) + 1;
+            int sl = dal_phongthi.SoLuongPhongThi(khoaThiId) + 1;
             string temp;
             if (sl < 10)
                 temp = "0" + sl.ToString();

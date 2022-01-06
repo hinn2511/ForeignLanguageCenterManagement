@@ -27,8 +27,6 @@ namespace TrungTamNgoaiNgu.DAL
             return TS;
         }
 
-
-
         public bool ThemTs(ThiSinh thiSinh)
         {
             context.ThiSinhs.InsertOnSubmit(thiSinh);

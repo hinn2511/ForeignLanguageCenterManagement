@@ -11,7 +11,7 @@ namespace TrungTamNgoaiNgu.DAL
     {
         QLTTNNDataContext context = new QLTTNNDataContext();
 
-        public List<Dto_DSDangKyThi> LayDsDangKyThi(int idKhoaThi)
+        public List<Dto_DSDangKyThi> LayDanhSachDangKyThi(int idKhoaThi)
         {
             List<Dto_DSDangKyThi> ds = context.PhieuDangKies.Where(p => p.Id_KhoaThi == idKhoaThi).Select(p => new Dto_DSDangKyThi
             {
@@ -22,7 +22,7 @@ namespace TrungTamNgoaiNgu.DAL
                 ngaydk = p.NgayDangKy,
                 trinhdo = p.TrinhDo                
             }).ToList();
-                return ds;
+            return ds;
         }
     }
 }

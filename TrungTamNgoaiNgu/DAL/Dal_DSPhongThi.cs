@@ -13,7 +13,7 @@ namespace TrungTamNgoaiNgu.DAL
     {
         QLTTNNDataContext context = new QLTTNNDataContext();
 
-        public List<Dto_DSPhongThi> DanhSachThiSinhTheoPhong(int phongThiId)
+        public List<Dto_DSPhongThi> DanhSachThiSinh(int phongThiId)
         {
             var dsThi = context.DanhSachPhongThis.Where(t => t.Id_PhongThi == phongThiId).Select(t => new Dto_DSPhongThi
             {
@@ -30,7 +30,7 @@ namespace TrungTamNgoaiNgu.DAL
             return dsThi;
         }
 
-        public List<Dto_DSPhongThi> DanhSachThiSinhTheoKhoaVaPhong(int khoaThiId, int phongThiId)
+        public List<Dto_DSPhongThi> DanhSachThiSinh(int khoaThiId, int phongThiId)
         {
             var dsThi = context.DanhSachPhongThis.Where(t => t.Id_PhongThi == phongThiId && t.PhongThi.KhoaThi.Id == khoaThiId).Select(t => new Dto_DSPhongThi
             {
@@ -63,7 +63,7 @@ namespace TrungTamNgoaiNgu.DAL
             return dsThi.Any() ? dsThi : null;
         }
 
-        public bool KiemTraSBD(int khoaThiId, string sbd)
+        public bool TonTaiSBD(int khoaThiId, string sbd)
         {
             var soBD = context.DanhSachPhongThis.FirstOrDefault(t => t.PhongThi.KhoaThi.Id == khoaThiId && t.SBD == sbd);
             return soBD != null ? true : false;
@@ -119,7 +119,7 @@ namespace TrungTamNgoaiNgu.DAL
             return chungnhan;
         }
 
-        public List<Dto_KetQuaThi> KetQuaTheoTen(string ten)
+        public List<Dto_KetQuaThi> LayKetQuaTheoTenThiSinh(string ten)
         {
             var dsThi = context.DanhSachPhongThis.Where(t => t.ThiSinh.HoTen == ten).Select(t => new Dto_KetQuaThi
             {
@@ -139,23 +139,6 @@ namespace TrungTamNgoaiNgu.DAL
         {
             int sl = context.DanhSachPhongThis.Where(t => t.PhongThi.ID_KhoaThi == khoaThiId).Count();
             return sl;
-        }
-
-        public List<Dto_DSPhongThi> DanhSachThiSinhThiTheoTrinhDo(int khoaThiId, string trinhDo)
-        {
-            var dsThi = context.DanhSachPhongThis.Where(t => t.PhongThi.ID_KhoaThi == khoaThiId && t.PhongThi.TrinhDo == trinhDo).Select(t => new Dto_DSPhongThi
-            {
-                Id = t.Id,
-                TenThiSinh = t.ThiSinh.HoTen,
-                Id_PhongThi = t.Id_PhongThi,
-                Id_ThiSinh = t.Id_ThiSinh,
-                SBD = t.SBD,
-                DiemDoc = (double)t.DiemDoc,
-                DiemNghe = (double)t.DiemNghe,
-                DiemNoi = (double)t.DiemNoi,
-                DiemViet = (double)t.DiemViet,
-            }).ToList();
-            return dsThi;
         }
 
         public bool ThemDachSachThi(DanhSachPhongThi ds)

@@ -125,6 +125,7 @@
     <Compile Include="Controllers\GiayChungNhanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThiSinhController.cs" />
+    <Compile Include="Controllers\ThongKeController.cs" />
     <Compile Include="Controllers\TraCuuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,6 +180,7 @@
     <Content Include="Views\ThiSinh\Result.cshtml" />
     <Content Include="Views\ThiSinh\Certificate.cshtml" />
     <Content Include="Views\GiayChungNhan\Index.cshtml" />
+    <Content Include="Views\ThongKe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

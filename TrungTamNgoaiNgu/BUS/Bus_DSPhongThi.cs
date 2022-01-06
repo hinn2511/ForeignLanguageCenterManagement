@@ -23,13 +23,13 @@ namespace TrungTamNgoaiNgu.BUS
 
         public List<Dto_PhongThi> LayDanhSachPhongThi(int khoaThiId)
         {
-            var dsPhongThi = dal_phongthi.DanhSachPhongThiTheoKhoa(khoaThiId);
+            var dsPhongThi = dal_phongthi.DanhSachPhongThi(khoaThiId);
             return dsPhongThi.Any() ? dsPhongThi : null;
         }
 
         public List<Dto_DSPhongThi> DanhSachThiSinhTheoPhong(int phongThiId)
         {
-            var dsThi = dal_dsphongthi.DanhSachThiSinhTheoPhong(phongThiId);
+            var dsThi = dal_dsphongthi.DanhSachThiSinh(phongThiId);
             int stt = 1;
             foreach (var item in dsThi)
             {
@@ -40,7 +40,7 @@ namespace TrungTamNgoaiNgu.BUS
 
         public List<Dto_DSPhongThi> DanhSachThiSinhTheoKhoaVaPhong(int khoaThiId, int phongThiId)
         {
-            var dsThi = dal_dsphongthi.DanhSachThiSinhTheoKhoaVaPhong(khoaThiId, phongThiId);
+            var dsThi = dal_dsphongthi.DanhSachThiSinh(khoaThiId, phongThiId);
             int stt = 1;
             foreach (var item in dsThi)
             {
@@ -64,7 +64,7 @@ namespace TrungTamNgoaiNgu.BUS
 
         public bool TonTaiSBD(int khoaThi, string sbd)
         {
-            return dal_dsphongthi.KiemTraSBD(khoaThi, sbd);
+            return dal_dsphongthi.TonTaiSBD(khoaThi, sbd);
         }
 
         public Dto_GiayChungNhan LayGiayChungNhan(int khoaThi, string sbd)
@@ -82,7 +82,7 @@ namespace TrungTamNgoaiNgu.BUS
                     var kqsdt = dal_dsphongthi.KetQuaTheoSDT(key);
                     return kqsdt.Any() ? kqsdt : null;
                 default:
-                    var kgten = dal_dsphongthi.KetQuaTheoTen(key);
+                    var kgten = dal_dsphongthi.LayKetQuaTheoTenThiSinh(key);
                     return kgten.Any() ? kgten : null;
             }
         }
@@ -94,7 +94,7 @@ namespace TrungTamNgoaiNgu.BUS
                 case "sdt":
                     return dal_dsphongthi.KetQuaTheoSDT(key);
                 default:
-                    return dal_dsphongthi.KetQuaTheoTen(key);
+                    return dal_dsphongthi.LayKetQuaTheoTenThiSinh(key);
             }
         }
 

@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using TrungTamNgoaiNgu.DAL;
 using TrungTamNgoaiNgu.DTO;
+
 namespace TrungTamNgoaiNgu.BUS
 {
-    public class Bus_DSDangKyThi
+    public class Bus_ThongKe
     {
-        Dal_DSDangKyThi dal = new Dal_DSDangKyThi();
-        public List<Dto_DSDangKyThi> LayDsDangKy(int idKhoaThi)
+        Dal_ThongKe dal_ThongKe = new Dal_ThongKe();
+        public List<Dto_ThongKe> LayDanhSachThongKe(string trinhDo)
         {
-            return dal.LayDanhSachDangKyThi(idKhoaThi);
+            return dal_ThongKe.ThongKeTheoTrinhDo(trinhDo);
         }
     }
 }

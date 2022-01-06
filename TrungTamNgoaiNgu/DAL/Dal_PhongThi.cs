@@ -10,7 +10,7 @@ namespace TrungTamNgoaiNgu.DAL
     {
         QLTTNNDataContext context = new QLTTNNDataContext();
 
-        public List<Dto_PhongThi> DanhSachPhongThiTheoKhoa(int khoaThiId)
+        public List<Dto_PhongThi> DanhSachPhongThi(int khoaThiId)
         {
             var dsPhongThi = context.PhongThis.Where(pt => pt.ID_KhoaThi == khoaThiId).Select(pt => new Dto_PhongThi
             {
@@ -24,7 +24,7 @@ namespace TrungTamNgoaiNgu.DAL
             return dsPhongThi;
         }
 
-        public List<Dto_PhongThi> DanhSachPhongThiTheoKhoaVaTrinhDo(int khoaThiId, string trinhDo)
+        public List<Dto_PhongThi> DanhSachPhongThi(int khoaThiId, string trinhDo)
         {
             var dsPhongThi = context.PhongThis.Where(pt => pt.ID_KhoaThi == khoaThiId && pt.TrinhDo == trinhDo).Select(pt => new Dto_PhongThi
             {
@@ -37,13 +37,13 @@ namespace TrungTamNgoaiNgu.DAL
             return dsPhongThi;
         }
 
-        public int SoLuongPhongThiTheoKhoa(int khoaThiId)
+        public int SoLuongPhongThi(int khoaThiId)
         {
             var sl = context.PhongThis.Where(pt => pt.ID_KhoaThi == khoaThiId).Count();
             return sl;
         }
 
-        public int SoLuongPhongThiTheoKhoaVaTrinhDo(int khoaThiId, string trinhDo)
+        public int SoLuongPhongThi(int khoaThiId, string trinhDo)
         {
             var sl = context.PhongThis.Where(pt => pt.ID_KhoaThi == khoaThiId && pt.TrinhDo == trinhDo).Count();
             return sl;

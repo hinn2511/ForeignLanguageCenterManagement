@@ -1,0 +1,72 @@
+﻿@model List<TrungTamNgoaiNgu.DTO.Dto_ThongKe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Thống kê</h2>
+
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+
+        <p>
+            Trình độ
+            <select style="padding: 5px; margin-right: 20px" name="trinhDo">
+                <option value="A2">A2</option>
+                <option value="B1">B1</option>
+            </select>
+
+            <input style="margin-right: 20px" type="submit" value="Thống kê" class="btn btn-default" />
+
+        </p>
+    </div>
+    @if (ViewBag.Error != null)
+    {
+        <h5 style="color:red">@ViewBag.Error</h5>
+    }
+</form>
+<div style="min-height:50vh">
+    @if (Model != null)
+    {
+        <div style="margin:20px 0">
+            <h4>
+                @ViewBag.trinhDo
+            </h4>
+
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Tên khóa thi
+                </th>
+                <th>
+                    Số lượng phòng thi
+                </th>
+                <th>
+                    Số lượng thí sinh
+                </th>
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenKhoaThi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoLuongPhongThi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoLuongThiSinh)
+                    </td>
+
+                </tr>
+            }
+
+
+
+        </table>
+
+    }
+</div>
