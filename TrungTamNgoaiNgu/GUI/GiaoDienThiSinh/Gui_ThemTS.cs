@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using TrungTamNgoaiNgu.BUS;
 using TrungTamNgoaiNgu.DTO;
+using System.Text.RegularExpressions;
 
 namespace TrungTamNgoaiNgu.GUI
 {
@@ -16,6 +17,7 @@ namespace TrungTamNgoaiNgu.GUI
         Bus_PhieuDangKy bus_pdk = new Bus_PhieuDangKy();
         Dto_ThiSinh_PhieuDangKy dto = new Dto_ThiSinh_PhieuDangKy();
         DateTime now = DateTime.Now;
+        
 
         public Gui_ThemTS()
         {
@@ -23,6 +25,7 @@ namespace TrungTamNgoaiNgu.GUI
             dtpNgayDangKy.Text = now.ToShortDateString().ToString();
             LayDanhSachKhoaThi();
             dtpNgayDangKy.Enabled = false;
+           
         }
 
         private void LayDanhSachKhoaThi()
@@ -37,33 +40,6 @@ namespace TrungTamNgoaiNgu.GUI
         {
             DialogResult = DialogResult.Cancel;
             Close();
-        }
-
-        private bool ThemTS()
-        {
-           
-            ts.HoTen = txtHoTen.Text;
-            ts.GioiTinh = cbxGioiTinh.SelectedItem.ToString();
-            ts.NgaySinh = NgaySinh.Value;
-            ts.NoiSinh = txtNoiSinh.Text;
-            ts.CMND = txtCmnd.Text;
-            ts.NgayCap = NgayCap.Value;
-            ts.NoiCap = txtNoiCap.Text;
-            ts.SDT = txtSdt.Text;
-            ts.Email = txtEmail.Text;
-            if (bus_ts.ThemTS(ts)) return true;
-            return false;
-        }
-
-        private bool ThemThongTinDangKy()
-        {
-            int id = bus_ts.LayThiSinhVuaThem();
-            pdk.Id_ThiSinh = bus_ts.LayThiSinhVuaThem();
-            pdk.Id_KhoaThi = dsKhoaThi[cbxKhoaThi.SelectedIndex].Id;
-            pdk.TrinhDo = cbxTrinhDo.SelectedItem.ToString();
-            pdk.NgayDangKy = now;
-            if (bus_pdk.DKDuThi(pdk)) return true;
-            return false;
         }
 
         private bool ktdulieunhapvao()
@@ -82,31 +58,48 @@ namespace TrungTamNgoaiNgu.GUI
               return true;
             return false;
         }
+        public static bool IsPhoneNumber(string number)
+        {
+            return Regex.Match(number, @"^([0-9]{10})$").Success;
+        }
+
+        public static bool IsIdCard(string number)
+        {
+            return Regex.Match(number, @"^([0-9]{9,12})$").Success;
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (ktdulieunhapvao())
             {
-                dto.HoTen = txtHoTen.Text;
-                dto.GioiTinh = cbxGioiTinh.SelectedItem.ToString();
-                dto.NgaySinh = NgaySinh.Value;
-                dto.NoiSinh = txtNoiSinh.Text;
-                dto.CMND = txtCmnd.Text;
-                dto.NgayCap = NgayCap.Value;
-                dto.NoiCap = txtNoiCap.Text;
-                dto.SDT = txtSdt.Text;
-                dto.Email = txtEmail.Text;
-                dto.Id_KhoaThi = dsKhoaThi[cbxKhoaThi.SelectedIndex].Id;
-                dto.TrinhDo = cbxTrinhDo.SelectedItem.ToString();
-                dto.NgayDangKy = now;
-
-                if (bus_ts.ThemTS(dto))
+                if (IsPhoneNumber(txtSdt.Text))
                 {
-                    if (bus_pdk.DKDuThi(dto))
-                        MessageBox.Show("Đã đăng ký thành công", "Thành công", MessageBoxButtons.OK);
-                    else MessageBox.Show("Đã có lỗi xảy ra ", "Thất bại", MessageBoxButtons.OK);
+                    if (IsIdCard(txtCmnd.Text))
+                    {
+                        dto.HoTen = txtHoTen.Text;
+                        dto.GioiTinh = cbxGioiTinh.SelectedItem.ToString();
+                        dto.NgaySinh = NgaySinh.Value;
+                        dto.NoiSinh = txtNoiSinh.Text;
+                        dto.CMND = txtCmnd.Text;
+                        dto.NgayCap = NgayCap.Value;
+                        dto.NoiCap = txtNoiCap.Text;
+                        dto.SDT = txtSdt.Text;
+                        dto.Email = txtEmail.Text;
+                        dto.Id_KhoaThi = dsKhoaThi[cbxKhoaThi.SelectedIndex].Id;
+                        dto.TrinhDo = cbxTrinhDo.SelectedItem.ToString();
+                        dto.NgayDangKy = now;
+
+                        if (bus_ts.ThemTS(dto))
+                        {
+                            if (bus_pdk.DKDuThi(dto))
+                                MessageBox.Show("Đã đăng ký thành công", "Thành công", MessageBoxButtons.OK);
+                            else MessageBox.Show("Đã có lỗi xảy ra ", "Thất bại", MessageBoxButtons.OK);
+                        }
+                        else MessageBox.Show("Đã có lỗi xảy ra", "Thất bại", MessageBoxButtons.OK);
+                    }
+                    else MessageBox.Show("CMND/CCCD là dãy gồm 9 - 12 số", "Thông báo", MessageBoxButtons.OK);
                 }
-                else MessageBox.Show("Đã có lỗi xảy ra", "Thất bại", MessageBoxButtons.OK);
+                else MessageBox.Show("Số điện thoại phải là dãy có 10 số", "Thông báo", MessageBoxButtons.OK);
             }
             else MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
         }
